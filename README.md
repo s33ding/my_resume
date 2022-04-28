@@ -1,12 +1,12 @@
 ## ROBERTO MOREIRA DINIZ
 
-Student of AI & Data Science 
+> Student of AI & Data Science 
 
 Specialized in Data Engineering
 
 ---
 ##### CONTACT
-*Cell phone number:
+* Cell phone number:
 *  +55 (61) 98234-0088.
  E-mail:
 * robertomdiniz@protonmail.com
