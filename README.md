@@ -6,15 +6,24 @@
 
 ##### CONTACT
 
-* Cell phone number:
+Cell phone number:
+
 *  +55 (61) 98234-0088.
- E-mail:
+
+E-mail:
+
 * robertomdiniz@protonmail.com
+
 Linkedin:
+
 * https://www.linkedin.com/in/roberto-diniz-227826207/
+
 Github:
+
 * https://github.com/s33ding
+
 Blog: 
+
 * https://sites.google.com/view/dataexplorer/home
 
 ---
