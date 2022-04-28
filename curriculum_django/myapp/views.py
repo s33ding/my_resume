@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.template import loader
+from django.http import HttpResponse
 
 # Create your views here.
 def home(request):
@@ -20,4 +22,24 @@ def contact(request):
   return render(request, 'myapp/contact.html')
 
 def resume(request):
-  return render(request, 'myapp/resume.html')
+  mySummary_p1 = "Experienced Co-Founder with a demonstrated history of working in the information technology and services industry. Skilled in Python, SQL, Pandas, Numpy, Sympy and Command Line. Professional with a Bachelor's degree focused in Data Science and Artiﬁcial Intelligence from IESB."  
+  mySummary_p2 = "Interested in AWS tools, Spark, Airﬂow, PostgreSQL, No-SQL, Docker, ETL, Scrap, CLI, Django and becoming an expert in Python."
+ 
+  context = {
+    "name":"Roberto Moreira Diniz",
+    "role":"Data Engineer", 
+    "email":"robertomdiniz@protonmail.com",
+    "cell_phone":"+55 (61) 98234-0088",
+    "github":"https://github.com/s33ding",
+    "city":"Brasília",
+    "country":"Brazil",
+    "telegram":"robertomdiniz",
+    "summary_p1": mySummary_p1,
+    "summary_p2": mySummary_p2,
+    "Py1":"Pandas",
+    "Py2":"Subprocess",
+    "Py3":"Plotly",
+    "Py4":"Boto3",
+    }
+  template = loader.get_template("myapp/resume.html")
+  return HttpResponse(template.render(context))
