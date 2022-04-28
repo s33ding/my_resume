@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+{% load static %}
+<link rel="stylesheet" href="{% static 'myapp/style.css' %}">
+
+<div class="topnav">
+  <a class="active" href="{% url 'home' %}">HOME</a>
+  <!-- <a href="{% url 'myForms' %}">FORMS</a> -->
+  <a href="{% url 'profile' %}">PROFILE</a>
+  <!-- <a href="{% url 'videos' %}">VIDEOS</a> -->
+</div class="topnav">
+<br>
+
+{% block head %}
+  <head></head>
+{% endblock %}
+
+<body>
+
+
+{% block content %}
+{% endblock %}
+</body>
