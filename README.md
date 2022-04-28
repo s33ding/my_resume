@@ -1,8 +1,8 @@
 ## ROBERTO MOREIRA DINIZ
 
-STUDENT OF AI & DATA SCIENCE 
+Student of AI & Data Science 
 
-SPECIALIZED IN DATA ENGINEERING
+Specialized in Data Engineering
 
 ---
 ##### CONTACT
