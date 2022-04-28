@@ -50,7 +50,6 @@ def resume(request):
     "backend1":"django",
     "backend2":"HTML",
     "backend3":"CSS",
-
     }
   template = loader.get_template("myapp/resume.html")
   return HttpResponse(template.render(context))
