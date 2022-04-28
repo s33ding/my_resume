@@ -6,11 +6,7 @@
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title> {{ name }} - Curriculum Vitae - R&eacute;sum&eacute;</title>
-  
-  <meta name="description" content="Semantic, Responsive, HTML and CSS Curriculum Vitae / Résumé of Front-end Developer and Web Designer J. Pedro Ribeiro">
-  <meta name="author" content="J. Pedro Ribeiro - jpedroribeiro.com">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> {{ contact.name }} - Curriculum Roberto </title>
   
   <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700italic,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" media="screen" href="styles.css">
@@ -21,71 +17,89 @@
 </head>
 
 <body>
-
-    <header class="vcard">
-    	<h1 class="fn">{{ name }}</h1>
-        <h2 class="role"> {{ role }}</h2>
+<BR>
+    <header vcard">
+    	<h1 class="fn">{{ contact.name }}</h1>
+        <h2 class="role"> {{ contact.role }}</h2>
+    	
+        <ul class="contact">
+        	<li>E-MAIL</li>
+            <li>CELL PHONE</li>
+            <li>GITHUB</li>
+            <li>COUNTRY & CITY</li>
+            <li>LINKEDIN</li>
+		</ul>
     	<ul class="contact">
-        	<li class="email"> {{ email }}</li>
-            <li class="tel"> {{ cell_phone}}</li>
-            <li class="url"><a href= "{{ github }}" title="{{ name }} Website">{{ github }}</a></li>
-            <li class="adr"><span class="locality">{{ city }}</span>, <span class="country-name">{{ country }}</span></li>
-            <li class="url Telegram">@{{ telegram }}</li>
+        	<li class="email"> {{ contact.email }}</li>
+            <li class="tel"> {{ contact.cell_phone}}</li>
+            <li class="url"><a href="{{ contact.siteLink }}" > {{contact.site}}</a></li>
+            <li class="adr"><span class="locality">{{ contact.city }}</span>, <span class="country-name">{{ contact.country }}</span></li>
+            <li class="url"><a href="{{ contact.linkedinLink }}" >{{ contact.linkedin }}</a></li>
 		</ul>
     </header>
 
 	<section id="summary">
     	<h1>Summary</h1>
-        <p> {{ summary_p1 }} </p>    	
+        <p> {{ summary.p1 }} </p>    	
         <br>
-        <p> {{ summary_p2 }} </p>    	
+        <p> {{ summary.p2 }} </p>    	
     </section>
     
     <section id="skills">
-    	<h1>Skills</h1>
+    <h1>Skills</h1>
         <dl>
-        	<dt>Python</dt>
-            <dd title="{{py1}}">{{py1}}</dd>
-            <dd title="{{py2}}">{{py2}}</dd>
-            <dd title="{{py3}}">{{py3}}</dd>
-            <dd title="{{py4}}">{{py4}}</dd>
-            <dd title="{{py5}}">{{py5}}</dd>
-            
+           
+            <dt>Python</dt>
+            {% for x in skills.Python %}
+                <dd>{{ x }}</dd>
+            {% endfor %}
+
             <dt>SQL</dt>
-            <dd title="{{ SQL1 }}">{{ SQL1 }}</dd>
-            <dd title="{{ SQL2 }}">{{ SQL2 }}</dd>
-            
-            <dt>Back-END</dt>
-            <dd title="{{ backend1 }}"> {{backend1}}</dd>
-            <dd title="{{ backend2 }}"> {{backend2}}</dd>
-            <dd title="{{ backend3}}"> {{backend3}}</dd>
+            {% for x in skills.SQL %}
+                <dd>{{ x }}</dd>
+            {% endfor %}
 
             <dt>Linux</dt>
-            <dd title="{{ linux1 }}">{{ linux1 }}</dd>
-            <dd title="{{ linux2 }}">{{ linux2 }}</dd>
-            <dd title="{{ linux3 }}">{{ linux3 }}</dd>
-            
-            <dt>Others</dt>
-            <dd title="{{ others1 }}">{{ others1 }}</dd>            
-        </dl>
+            {% for x in skills.Linux %}
+                <dd>{{ x }}</dd>
+            {% endfor %}
+
+            <dt>Cloud</dt>
+            {% for x in skills.Cloud %}
+                <dd>{{ x }}</dd>
+            {% endfor %}
+
+
+    </dl>
     </section>
     
     <section id="experience">
     	<h1>Work Experience</h1>
+
         <article>
-        	<h1><span>{{pos_wk1}}</span></h1>
-            <h2>{{place_wk1}}</h2>
-            <time datetime="{{start_wk1}}" class="start">{{start_wk1}}</time>
-            <span class="end">{{finished_wk1}}</span>
-            <p> {{description_wk1}} <br>
+        	<h1><span>{{ experienceA.position }}</span></h1>
+            <h2>{{ experienceA.place }}</h2>
+            <p>{{ experienceA.started }}</p>
+            <span class="end">{{ experienceA.finished }}</span>
+            <p> {{ experienceA.description }} <br>
             </p>            
         </article>
 
-        <section id="education">
+        <article>
+        	<h1><span>{{ experienceB.position }}</span></h1>
+            <h2>{{ experienceB.place }}</h2>
+            <p>{{ experienceB.started }}</p>
+            <span class="end">{{ experienceB.finished }}</span>
+            <p> {{ experienceB.description }} <br>
+            </p>            
+        </article>
+
+    <section id="education">
     	<h1>Education</h1>
-        <h2>{{ university }}</h2>
-        <p>{{ course }}</p>
+        <h2>{{ education.university }}</h2>
+        <p>{{ education.course }}</p>
     </section>
+
     
     <!-- <section id="hobbies">
     	<h1>Hobbies &amp; Interests</h1>
