@@ -27,19 +27,30 @@ def resume(request):
  
   context = {
     "name":"Roberto Moreira Diniz",
-    "role":"Data Engineer", 
+    "role":"Data Engineer/DataScientist", 
     "email":"robertomdiniz@protonmail.com",
     "cell_phone":"+55 (61) 98234-0088",
     "github":"https://github.com/s33ding",
     "city":"Brasília",
     "country":"Brazil",
+    "university":"IESB, Brasília",
+    "course":"Data Science & Artificial Intelligence",
     "telegram":"robertomdiniz",
+
     "summary_p1": mySummary_p1,
     "summary_p2": mySummary_p2,
-    "Py1":"Pandas",
-    "Py2":"Subprocess",
-    "Py3":"Plotly",
-    "Py4":"Boto3",
+
+    "py1":"Pandas",
+    "py2":"Subprocess",
+    "py3":"Plotly",
+    "py4":"Boto3",
+    "linux1":"Bash",
+    "linux2":"Command Line",
+    "linux3":"Data Processing in Shell",
+    "backend1":"django",
+    "backend2":"HTML",
+    "backend3":"CSS",
+
     }
   template = loader.get_template("myapp/resume.html")
   return HttpResponse(template.render(context))
