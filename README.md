@@ -2,7 +2,7 @@
 
 STUDENT OF AI & DATA SCIENCE 
 
-SPECIALIZED IN DATA ENGINEERINGs
+SPECIALIZED IN DATA ENGINEERING
 
 ---
 ##### CONTACT
@@ -70,4 +70,4 @@ Blog:
 Experienced Co-Founder with a demonstrated history of working in the information technology and services industry. Skilled in Python, SQL, Pandas, Numpy, Sympy and Command Line. Professional with a Bachelor's degree focused in Data Science and Artiﬁcial
 Intelligence from IESB. 
 
-Interested in  AWS tools, Spark, Airﬂow, Postgresql, No-SQL, Docker, ETL, Scrap, CLI, Django and becoming an expert in Python.
+Interested in  AWS tools, Spark, Airﬂow, PostgreSQL, No-SQL, Docker, ETL, Scrap, CLI, Django and becoming an expert in Python.
