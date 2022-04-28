@@ -58,6 +58,7 @@ def resume(request):
     "py2":"Subprocess",
     "py3":"Plotly",
     "py4":"Boto3",
+    "py5":"PySpark",
     
     "SQL1":"PostgreSQL",
     "SQL2":"SQLlite",
@@ -68,6 +69,7 @@ def resume(request):
     "backend1":"django",
     "backend2":"HTML",
     "backend3":"CSS",
+    "others1":"AWS",
     }
   template = loader.get_template("myapp/resume.html")
   return HttpResponse(template.render(context))
