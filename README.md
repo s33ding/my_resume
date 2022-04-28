@@ -1,60 +1,71 @@
-## ROBERTO MOREIRA DINIZ
+## __ROBERTO MOREIRA DINIZ__
 
-> Student of AI & Data Science, specialized in Data Engineering
+> Student of AI & Data Science; Specialized in Data Engineering.
 
 ---
 
-##### CONTACT
+##### __CONTACT__
 
-Cell phone number:
-*  +55 (61) 98234-0088.
-E-mail:
-* robertomdiniz@protonmail.com
 Linkedin:
-* https://www.linkedin.com/in/roberto-diniz-227826207/
+ https://www.linkedin.com/in/roberto-diniz-227826207/
+
 Github:
-* https://github.com/s33ding
+ https://github.com/s33ding
+
+Telelegram:
+ @robertomdiniz
+
+E-mail:
+ robertomdiniz@protonmail.
+
+
+
 Blog: 
-* https://sites.google.com/view/dataexplorer/home
+ https://sites.google.com/view/dataexplorer/home
+
+Cell phone number: 
+ [+55 (61) 98234-0088.]()
 
 ---
 
-##### GRADUTATION:
+##### __GRADUTATION__:
 
-* Architecture, Uniceub - Completed,Bachelor's degree, 2020.
-- Artiﬁcial Intelligence & Data Science IESB - In progress, Bachelor's degree.
-
----
-
-##### CERTIFICATIONS:
-
-- Command Line.
-- Data Analysis with Pandas.
-- Exploratory Data Analysis in Python. 
--  How to Clean Data with Python.
-- Python3. 
-- SQL Course.
-- Statiscs with Numpy.
-- The Basics of Regular Expressions.
-- Writing Eﬃcient Python Code.
-- Introduction to AWS Boto in Python.
-- Cloud Computing for Everyone.
-- Data Engineering for Everyone.
-- Data Processing in Shell.
-- Introduction to Airﬂow in Python.
-- Introduction to Power BI.
-- Introduction to Relational Databases in SQL.
-- Introduction to Shell.
-- Introduction to SQL.
-- Python Data Science Toolbox (Part 2).
-- Regular Expressions in Python.
-- Streamlined Data Ingestion with Pandas.
-- Creating PostgreSQL Databases.
-- Introduction to PySpark.
+* Architecture, Uniceub 
+	* Completed,Bachelor's degree, 2020.
+* Artiﬁcial Intelligence & Data Science IESB 
+	* In progress, Bachelor's degree.
 
 ---
 
-##### WORK EXPERIENCE:
+##### __CERTIFICATIONS__:
+
+1. Command Line.
+2. Data Analysis with Pandas.
+3. Exploratory Data Analysis in Python. 
+4.  How to Clean Data with Python.
+5. Python3. 
+6. SQL Course.
+7. Statiscs with Numpy.
+8. The Basics of Regular Expressions.
+9. Writing Eﬃcient Python Code.
+10. Introduction to AWS Boto in Python.
+11. Cloud Computing for Everyone.
+12. Data Engineering for Everyone.
+13. Data Processing in Shell.
+14. Introduction to Airﬂow in Python.
+15. Introduction to Power BI.
+16. Introduction to Relational Databases in SQL.
+17. Introduction to Shell.
+18. Introduction to SQL.
+19. Python Data Science Toolbox (Part 2).
+20. Regular Expressions in Python.
+21. Streamlined Data Ingestion with Pandas.
+22. Creating PostgreSQL Databases.
+23. Introduction to PySpark.
+
+---
+
+##### __WORK EXPERIENCE__:
 
 * Data Engineer, on Ministry of Communication.
 	
@@ -66,7 +77,7 @@ Blog:
 
 ---
 
-##### ABOUT ME:
+##### __ABOUT ME__:
 
 Experienced Co-Founder with a demonstrated history of working in the information technology and services industry. Skilled in Python, SQL, Pandas, Numpy, Sympy and Command Line. Professional with a Bachelor's degree focused in Data Science and Artiﬁcial
 Intelligence from IESB. 
