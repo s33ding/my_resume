@@ -1,11 +1,11 @@
 ## ROBERTO MOREIRA DINIZ
 
-> Student of AI & Data Science 
-
-Specialized in Data Engineering
+> Student of AI & Data Science, specialized in Data Engineering
 
 ---
+
 ##### CONTACT
+
 * Cell phone number:
 *  +55 (61) 98234-0088.
  E-mail:
@@ -20,6 +20,7 @@ Blog:
 ---
 
 ##### GRADUTATION:
+
 * Architecture, Uniceub - Completed,Bachelor's degree, 2020.
 - Artiﬁcial Intelligence & Data Science IESB - In progress, Bachelor's degree.
 
