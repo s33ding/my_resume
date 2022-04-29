@@ -22,11 +22,11 @@
     	<h1 class="fn">{{ contact.name }}</h1>
         <h2 class="role"> <b>{{ contact.role }}</b></h2>
     	<ul class="contact">
-        	<li class="email"> {{ contact.email }}</li>
-            <li class="tel"> {{ contact.cell_phone}}</li>
-            <li class="url"><a href="{{ contact.siteLink }}" > {{contact.site}}</a></li>
-            <li class="adr"><span class="locality">{{ contact.city }}</span>, <span class="country-name">{{ contact.country }}</span></li>
-            <li class="url"><a href="{{ contact.linkedinLink }}" >{{ contact.linkedin }}</a></li>
+        	<li class="email">Email: {{ contact.email }}</li>
+            <li class="tel">Phone: {{ contact.cell_phone}}</li>
+            <li class="adr">City: <span class="locality">{{ contact.city }}</span>, <span class="country-name">{{ contact.country }}</span></li>
+            <li class="url">Github: <a href="{{ contact.githubLink }}" > {{contact.github}} </a></li>
+            <li class="url">Linkedin: <a href="{{ contact.linkedinLink }}" >{{ contact.linkedin }}</a></li>
 		</ul>
     </header>
 
