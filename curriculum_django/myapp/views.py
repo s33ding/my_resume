@@ -2,27 +2,9 @@
 from django.shortcuts import render
 from django.template import loader
 from django.http import HttpResponse
+import os
 
 # Create your views here.
-def home(request):
-  return render(request, 'myapp/home.html')
-
-def about_me(request):
-  return render(request, 'myapp/about_me.html')
-
-def graduation(request):
-  return render(request, 'myapp/graduation.html')
-
-def certifications(request):
-  return render(request, 'myapp/certifications.html')
-
-def work_experience(request):
-  return render(request, 'myapp/work_experience.html')
-
-def contact(request):
-  return render(request, 'myapp/contact.html')
-
-
 personalData = {
     "name":"Roberto Moreira Diniz",
     "role":"Data Engineer/Data Scientist", 
@@ -62,6 +44,10 @@ skills = {
   "Linux":["Bash","Command Line","Data Processing in Shell"], 
   "Cloud":["AWS"],
 }
+
+os.system("cd ..")
+lst = os.listdir()
+certificationsLst = [x.split('_')[1].split('.')[0] for x in lst if '.pdf' in x]
 context = {
     "contact" : personalData,
     "experienceA" : experienceA,
@@ -69,10 +55,12 @@ context = {
     "skills": skills,
     "education": educationDct,
     "summary" : summaryDct,
+    "certifications": certificationsLst,
   }
-
 def resume(request):
   template = loader.get_template("myapp/resume.html")
   return HttpResponse(template.render(context))
+
+
 
 # %%
