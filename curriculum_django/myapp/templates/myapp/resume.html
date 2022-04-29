@@ -20,15 +20,7 @@
 <BR>
     <header vcard">
     	<h1 class="fn">{{ contact.name }}</h1>
-        <h2 class="role"> {{ contact.role }}</h2>
-    	
-        <ul class="contact">
-        	<li>E-MAIL</li>
-            <li>CELL PHONE</li>
-            <li>GITHUB</li>
-            <li>COUNTRY & CITY</li>
-            <li>LINKEDIN</li>
-		</ul>
+        <h2 class="role"> <b>{{ contact.role }}</b></h2>
     	<ul class="contact">
         	<li class="email"> {{ contact.email }}</li>
             <li class="tel"> {{ contact.cell_phone}}</li>
@@ -41,32 +33,30 @@
 	<section id="summary">
     	<h1>Summary</h1>
         <p> {{ summary.p1 }} </p>    	
-        <br>
-        <p> {{ summary.p2 }} </p>    	
     </section>
     
     <section id="skills">
     <h1>Skills</h1>
         <dl>
            
-            <dt>Python</dt>
+            <dt><b>Python</b></dt>
             {% for x in skills.Python %}
-                <dd>{{ x }}</dd>
+                <dd><b>{{ x }}</b></dd>
             {% endfor %}
 
-            <dt>SQL</dt>
+            <dt><b>SQL</b></dt>
             {% for x in skills.SQL %}
-                <dd>{{ x }}</dd>
+                <dd><b>{{ x }}</b></dd>
             {% endfor %}
 
-            <dt>Linux</dt>
+            <dt><b>Linux</b></dt>
             {% for x in skills.Linux %}
-                <dd>{{ x }}</dd>
+                <dd><b>{{ x }}</b></dd>
             {% endfor %}
 
-            <dt>Cloud</dt>
+            <dt><b>Cloud</b></dt>
             {% for x in skills.Cloud %}
-                <dd>{{ x }}</dd>
+                <dd><b>{{ x }}</b></dd>
             {% endfor %}
 
 
@@ -79,7 +69,8 @@
         <article>
         	<h1><span>{{ experienceA.position }}</span></h1>
             <h2>{{ experienceA.place }}</h2>
-            <p>{{ experienceA.started }}</p>
+
+            <span class="start">{{ experienceA.started }}</span>
             <span class="end">{{ experienceA.finished }}</span>
             <p> {{ experienceA.description }} <br>
             </p>            
@@ -89,6 +80,8 @@
         	<h1><span>{{ experienceB.position }}</span></h1>
             <h2>{{ experienceB.place }}</h2>
             <p>{{ experienceB.started }}</p>
+
+            <time class="start">{{experienceB.started }}</time>
             <span class="end">{{ experienceB.finished }}</span>
             <p> {{ experienceB.description }} <br>
             </p>            
