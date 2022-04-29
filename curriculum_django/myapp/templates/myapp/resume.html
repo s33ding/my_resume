@@ -1,5 +1,5 @@
 {% load static %}
-<link rel="stylesheet" href="{% static 'myapp/style_resume.css' %}">
+<link rel="stylesheet" href="{% static 'myapp/resume.css' %}">
 
 {% block head %}
 {% endblock %}
@@ -67,23 +67,24 @@
     	<h1>Work Experience</h1>
 
         <article>
-        	<h1><span>{{ experienceA.position }}</span></h1>
+            <br>
+            <h1><span>{{ experienceA.position }}</span></h1>
             <h2>{{ experienceA.place }}</h2>
 
             <span class="start">{{ experienceA.started }}</span>
             <span class="end">{{ experienceA.finished }}</span>
-            <p> {{ experienceA.description }} <br>
+            <p>{{ experienceA.description }}<br>
             </p>            
         </article>
-
+        
         <article>
+            <br>
         	<h1><span>{{ experienceB.position }}</span></h1>
             <h2>{{ experienceB.place }}</h2>
-            <p>{{ experienceB.started }}</p>
 
             <time class="start">{{experienceB.started }}</time>
             <span class="end">{{ experienceB.finished }}</span>
-            <p> {{ experienceB.description }} <br>
+            <p>{{ experienceB.description }}<br>
             </p>            
         </article>
 

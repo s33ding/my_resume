@@ -75,8 +75,8 @@ background:rgba(151, 150, 152, 0.863); color: #ffffffd4; font-weight:
 body {
   width: 230mm;
   height: 100%;
-  margin:  30px 60px 30px 30px;
-  padding:  30px 60px 30px 30px;
+  margin:  20px 30px 30px 20px;
+  padding:  20px 30px 30px 20px;
   font-size: 12pt;
 }
 * {
