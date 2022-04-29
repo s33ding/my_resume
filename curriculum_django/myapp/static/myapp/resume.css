@@ -54,14 +54,13 @@ background:rgba(151, 150, 152, 0.863); color: #ffffffd4; font-weight:
   background-color: rgb(79, 107, 126); -webkit-box-shadow: inset auto rgba(0, 0, 0, 0.15); 
   box-shadow: inset auto rgba(0, 0, 0, 0.15); }
 
-#experience article {margin: 15px 0 37px 95px; padding-left: 5px; position: relative; border: 1px solid rgb(151, 150, 152)}
+#experience article {margin: 20px; padding-left: 40px; position: relative; border: 1px solid rgb(151, 150, 152)}
 #experience article:hover {
   border: 1px dotted rgb(112, 156, 177); background: rgba(66, 88, 100, 0.446)}
 #experience article h1 {border: none; font-size: 1.2em; font-style: italic; font-weight: bold; padding: 0; text-transform: none;}
 #experience article h1 a {color: #333; text-decoration: none}
 #experience article h1 span {font-size: 0.8em; font-weight: normal;}
-#experience article .start, #experience article .end { border-top: 1px dashed rgb(151, 150, 152); 
-  font-size: 0.75em; left: -80px; padding: 4px 0; position: absolute; text-align: center; top: 19px; width: 60px;}
+#experience article .start, #experience article .end { border-top: 1px dashed rgb(151, 150, 152); font-size: 0.75em; left: -80px; padding: 4px 0; position: absolute; text-align: center; top: 19px; width: 60px;}
 #experience article .end {top: 0; border: none}
 #experience article p {font-size: 0.9em; line-height: 22px; margin: 15px 50px; }
 
