@@ -45,9 +45,15 @@ skills = {
   "Cloud":["AWS"],
 }
 
-os.system("cd ..")
-lst = os.listdir()
-certificationsLst = [x.split('_')[1].split('.')[0] for x in lst if '.pdf' in x]
+with open("certifications.txt","r") as f:
+    txt = f.read()
+
+lst = txt.split("\n")
+lst = [x  for x in lst if x != ""]
+print(lst)
+
+certificationsDct = {"certifications":lst}
+#%%
 context = {
     "contact" : personalData,
     "experienceA" : experienceA,
@@ -55,8 +61,9 @@ context = {
     "skills": skills,
     "education": educationDct,
     "summary" : summaryDct,
-    "certifications": certificationsLst,
+    "certifications": certificationsDct,
   }
+
 def resume(request):
   template = loader.get_template("myapp/resume.html")
   return HttpResponse(template.render(context))
