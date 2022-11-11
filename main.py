@@ -1,11 +1,11 @@
 #%%
 import pandas as pd
 
-df = pd.read_csv("certificates.csv")
+certificates = pd.read_csv("certificates.csv")
+certificates = certificates.sort_values('date').reset_index(drop=True)
+html_certificates = df.to_html() #("README.md")
 
-#%%
-df.to_html("certificates.html")
-
+print(html_certificates)
 
 
 # %%
