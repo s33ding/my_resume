@@ -36,7 +36,10 @@ with open("resume_in_progress.html","w") as f:
       <br>
         <h3>About Me:</h3>
         <p>{dt["aboutme"]}</p>
+    <table>
+        {"""
+        """}
+    </table>
     </body>
     """)
-    f.write(certificates)
     
