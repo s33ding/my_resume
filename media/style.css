@@ -5,7 +5,12 @@ body {
     background-color: white;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
+    text-align: center;
+    color: #9b59b6;
+}
+
+h2, h3, h4, h5, h6 {
     color: #9b59b6;
 }
 
@@ -50,4 +55,25 @@ table tr:hover {
 table th, table td {
   padding: 10px;
   border: 1px solid #E0E0E0;
+}
+
+a img {
+   width: 25px;
+   height: 25px;
+   margin: 0 10px;
+}.icon-container {
+   display: flex;
+   justify-content: flex-end;
+}.icon-container a img {
+   width: 25px;
+   height: 25px;
+   margin: 0 10px;
+   display: inline-block;
+}
+.icon-container a span {
+   display: none;
+}
+.icon-container a:hover span {
+   display: inline-block;
+   margin-left: 10px;
 }

@@ -3,13 +3,13 @@ import json
 from jinja2 import Template
 
 # Read in the data
-education = pd.read_csv("midia/education.csv")
+education = pd.read_csv("media/education.csv")
 education.set_index("school")
 
-experience = pd.read_csv("midia/experience.csv")
+experience = pd.read_csv("media/experience.csv")
 experience.set_index("company")
 
-certificates = pd.read_csv("midia/certificates.csv")
+certificates = pd.read_csv("media/certificates.csv")
 certificates['date'] = pd.to_datetime(certificates['date']).dt.date
 certificates = certificates.sort_values('date', ascending=False).reset_index(drop=True)
 
@@ -43,7 +43,7 @@ table_template = """
 template = Template(table_template)
 table_html = template.render(table=certificates)
 
-with open("midia/aboutMe.json") as f:
+with open("media/data.json") as f:
     dt = json.load(f)
 
 with open("README.md",'w') as f:
@@ -58,14 +58,36 @@ with open("resume_in_progress.html","w") as f:
    <head>
       <meta charset="utf-8">
       <title>RESUME_IN_PROGRESS</title>
-      <link rel="stylesheet" href="midia/style.css"> 
+      <link rel="stylesheet" href="media/style.css"> 
    </head>
-   <body>
-     <h1>{dt['name']}</h1>
-      <br>
-        <h3>About Me:</h3>
-        <p>{dt["aboutme"]}</p>
-        {table_html}
-    </body>
-    """)
 
+   <body>
+    <div class="icon-container">
+       <a href="{dt['linkedin']}">
+          <img src="media/icons/linkedin.png" alt="LinkedIn">
+          <span>{dt['linkedin']}</span>
+       </a>
+       <a href="{dt['github']}">
+          <img src="media/icons/git.png" alt="GitHub">
+          <span>{dt['github']}</span>
+       </a>
+       <a href="{dt['e-mail']}">
+          <img src="media/icons/mail.png" alt="Email">
+          <span>{dt['e-mail']}</span>
+       </a>
+       <a href="{dt['telegram']}">
+          <img src="media/icons/telegram.png" alt="Telegram">
+          <span>{dt['telegram']}</span>
+       </a>
+    </div>                          
+      <h1>{dt['name']}</h1>
+      <div>
+         <br>
+         <h3>About Me:</h3>
+         <p>{dt["aboutme"]}</p>
+         {table_html}
+      </div>
+   </body>
+</html>
+
+""")
