@@ -16,6 +16,20 @@
     
     <tr>
     
+        <td><a href='https://www.datacamp.com/statement-of-accomplishment/course/321c4f45e8a5d40f2ed59217d9dc1a01e8651c5c?raw=1'>Introduction to AWS Boto in Python</a></td>
+    
+        <td>2023-02-06</td>
+    
+        <td>CLOUD</td>
+    
+        <td>DataCamp</td>
+    
+        <td>#23,179,911</td>
+    
+    </tr>
+    
+    <tr>
+    
         <td><a href='https://www.codecademy.com/profiles/robertomdiniz/certificates/895f3c0e3a564e9abea6f431ce5d87cc'>Introduction to Big Data with PySpark Course</a></td>
     
         <td>2022-12-12</td>
