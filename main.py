@@ -13,6 +13,8 @@ certificates = pd.read_csv("midia/certificates.csv")
 certificates['date'] = pd.to_datetime(certificates['date']).dt.date
 certificates = certificates.sort_values('date', ascending=False).reset_index(drop=True)
 
+READMEmd = certificates.to_html()
+
 # Add the link to the curso column
 certificates["curso"] = "<a href='" + certificates["link"] + "'>" + certificates["curso"] + "</a>"
 
@@ -45,7 +47,7 @@ with open("midia/aboutMe.json") as f:
     dt = json.load(f)
 
 with open("README.md",'w') as f:
-    f.write(table_html)
+    f.write(READMEmd)
 
 with open("resume_in_progress.html","w") as f:
     f.write(f"""
