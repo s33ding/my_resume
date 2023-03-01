@@ -1,4 +1,3 @@
 pandas
-jinja2
 flask
-redis
+jinja2

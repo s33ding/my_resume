@@ -39,6 +39,7 @@ table_template = """
 </table>
 """
 
+
 # Render the table using Jinja
 template = Template(table_template)
 table_html = template.render(table=certificates)
@@ -46,18 +47,26 @@ table_html = template.render(table=certificates)
 with open("media/data.json") as f:
     dt = json.load(f)
 
-with open("template/home.html", "w") as f:
-    f.write(f"""
-   <!-- index.html -->
 
+with open("static/styles.css", 'r') as f:
+    my_style = f.read()
+
+my_css = f"""
+<style>
+    {my_style}
+</style>
+"""
+
+with open("template/home.html", "w") as f:
+    f.write("""
+   <!-- index.html -->
    <!DOCTYPE html>
    <html lang="en">
    <head>
       <meta charset="utf-8">
       <title>RESUME_IN_PROGRESS</title>
-   <link rel="stylesheet" href="https://raw.githubusercontent.com/s33ding/myCertificates/main/flask/static/style.css">
+   """ + my_css + f"""
    </head>
-
    <body>
       <div class="icon-container">
          <a href="{dt['linkedin']}">
@@ -86,6 +95,5 @@ with open("template/home.html", "w") as f:
       </div>
    </body>
 </html>
-
 """)
 
