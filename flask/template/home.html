@@ -5,7 +5,6 @@
    <head>
       <meta charset="utf-8">
       <title>RESUME_IN_PROGRESS</title>
-   
 <style>
     /* Add this to your style.css file */
 
@@ -88,24 +87,24 @@ a img {
 }
 
 </style>
-
-   </head>
+</head>
    <body>
       <div class="icon-container">
          <a href="https://www.linkedin.com/in/s33ding/">
-            <img src="media/icons/linkedin.png" alt="LinkedIn">
+            <img src=" {{ url_for('static', filename='linkedin.png') }} " alt="LinkedIn">
             <span>https://www.linkedin.com/in/s33ding/</span>
          </a>
          <a href="https://www.github.com/s33ding/">
-            <img src="media/icons/git.png" alt="GitHub">
+            <img src=" {{ url_for('static', filename='git.png') }} " alt="GitHub">
             <span>https://www.github.com/s33ding/</span>
          </a>
          <a href="robertomdiniz@protonmail.com">
-            <img src="media/icons/mail.png" alt="Email">
+            <img src=" {{ url_for('static', filename='mail.png') }} " alt="Email">
+
             <span>robertomdiniz@protonmail.com</span>
          </a>
          <a href="https://t.me/robertomdiniz">
-            <img src="media/icons/telegram.png" alt="Telegram">
+            <img src=" {{ url_for('static', filename='telegram.png') }} " alt="Telegram">
             <span>https://t.me/robertomdiniz</span>
          </a>
       </div>

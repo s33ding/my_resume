@@ -57,6 +57,11 @@ my_css = f"""
 </style>
 """
 
+linkedin_img = "{{ url_for('static', filename='linkedin.png') }}"
+git_img = "{{ url_for('static', filename='git.png') }}"
+email_img = "{{ url_for('static', filename='mail.png') }}"
+telegram_img = "{{ url_for('static', filename='telegram.png') }}"
+
 with open("template/home.html", "w") as f:
     f.write("""
    <!-- index.html -->
@@ -64,25 +69,26 @@ with open("template/home.html", "w") as f:
    <html lang="en">
    <head>
       <meta charset="utf-8">
-      <title>RESUME_IN_PROGRESS</title>
-   """ + my_css + f"""
-   </head>
+      <title>RESUME_IN_PROGRESS</title>"""
+   +my_css+
+  f"""</head>
    <body>
       <div class="icon-container">
          <a href="{dt['linkedin']}">
-            <img src="media/icons/linkedin.png" alt="LinkedIn">
+            <img src=" """ + linkedin_img + f""" " alt="LinkedIn">
             <span>{dt['linkedin']}</span>
          </a>
          <a href="{dt['github']}">
-            <img src="media/icons/git.png" alt="GitHub">
+            <img src=" """ + git_img + f""" " alt="GitHub">
             <span>{dt['github']}</span>
          </a>
          <a href="{dt['e-mail']}">
-            <img src="media/icons/mail.png" alt="Email">
+            <img src=" """ + email_img + f""" " alt="Email">
+
             <span>{dt['e-mail']}</span>
          </a>
          <a href="{dt['telegram']}">
-            <img src="media/icons/telegram.png" alt="Telegram">
+            <img src=" """ + telegram_img + f""" " alt="Telegram">
             <span>{dt['telegram']}</span>
          </a>
       </div>
