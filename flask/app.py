@@ -9,7 +9,7 @@ subprocess.run(["python", "create_home_html.py"])
 template_dir = os.path.abspath('template')
 
 # Initialize the Flask app
-app = Flask(__name__, template_folder=template_dir, static_url_path='/static')
+app = Flask(__name__, template_folder=template_dir)
 
 # Define a route to render the home.html template
 @app.route('/')

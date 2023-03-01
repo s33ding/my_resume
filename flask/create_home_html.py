@@ -55,8 +55,7 @@ with open("template/home.html", "w") as f:
    <head>
       <meta charset="utf-8">
       <title>RESUME_IN_PROGRESS</title>
-	<link rel="stylesheet" href="https://raw.githubusercontent.com/username/repository-name/branch-name/path/to/file.css">
-
+   <link rel="stylesheet" href="https://raw.githubusercontent.com/s33ding/myCertificates/main/flask/static/style.css">
    </head>
 
    <body>
