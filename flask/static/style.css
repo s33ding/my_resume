@@ -1,0 +1,79 @@
+/* Add this to your style.css file */
+
+body {
+    font-family: 'Share Tech Mono', monospace;
+    background-color: white;
+}
+
+h1 {
+    text-align: center;
+    color: #9b59b6;
+}
+
+h2, h3, h4, h5, h6 {
+    color: #9b59b6;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #9b59b6;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #9b59b6;
+    color: white;
+}
+
+a {
+    color: #9b59b6;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    background-color: #9b59b6;
+}
+table {
+  font-family: 'Share Tech Mono', monospace;
+  background-color: #F5F5F5;
+  color: #333333;
+  border-collapse: collapse;
+}
+
+table tr:hover {
+  background-color: #E0E0E0;
+  color: #8A2BE2;
+  transform: scale(1.05);
+}
+
+table th, table td {
+  padding: 10px;
+  border: 1px solid #E0E0E0;
+}
+
+a img {
+   width: 25px;
+   height: 25px;
+   margin: 0 10px;
+}.icon-container {
+   display: flex;
+   justify-content: flex-end;
+}.icon-container a img {
+   width: 25px;
+   height: 25px;
+   margin: 0 10px;
+   display: inline-block;
+}
+.icon-container a span {
+   display: none;
+}
+.icon-container a:hover span {
+   display: inline-block;
+   margin-left: 10px;
+}
