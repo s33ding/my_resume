@@ -32,7 +32,7 @@ for _, row in experience.iterrows():
     # create an HTML list item (li) for each row
     li = f"""
     <li>
-        <strong>{row['title']}</strong> 
+        <strong>{row['title']}</strong>({row["job_type"]})
         <ul>
             <li>At: {row['company']}, {row['where']}.</li>
             <li>Date: {row['start']} - {row['end']}.</li>
