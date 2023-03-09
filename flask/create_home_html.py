@@ -4,22 +4,60 @@ from jinja2 import Template
 
 # Read in the data
 education = pd.read_csv("media/education.csv")
-education.set_index("school")
-
 experience = pd.read_csv("media/experience.csv")
-experience.set_index("company")
+
+# create an empty string to hold the HTML code
+html_educ = ""
+# iterate through each row of the DataFrame
+for _, row in education.iterrows():
+    # create an HTML list item (li) for each row
+    li = f"""
+    <li>
+        <ul>{row['degree']} in {row['field_of_study']}.</ul>
+        <ul>At: {row['school']}.</ul> 
+        <ul>Date: {row['start_date']} - {row['end_date']}.</ul>
+    </li>
+    """
+    # append the list item to the HTML string
+    html_educ += li
+
+# wrap the HTML code in an unordered list (ul) tag
+ul_educ = f"<ul>{html_educ}</ul>"
+
+# create an empty string to hold the HTML code
+html_exp = ""
+
+# iterate through each row of the DataFrame
+for _, row in experience.iterrows():
+    # create an HTML list item (li) for each row
+    li = f"""
+    <li>
+        <strong>{row['title']}</strong> 
+        <ul>
+            <li>At: {row['company']}, {row['where']}.</li>
+            <li>Date: {row['start']} - {row['end']}.</li>
+            <li>Description: {row['description']}.</li>
+            <li>Job Type: {row['job_type']}.</li>
+            <li>Skills: {row['skills']}.</li>
+        </ul>
+    </li>"""
+    # append the list item to the HTML string
+    html_exp += li
+
+# wrap the HTML code in an unordered list (ul) tag
+ul_exp = f"<ul>{html_exp}</ul>"
 
 certificates = pd.read_csv("media/certificates.csv")
-certificates['date'] = pd.to_datetime(certificates['date']).dt.date
-certificates = certificates.sort_values('date', ascending=False).reset_index(drop=True)
+certificates['DATE'] = pd.to_datetime(certificates['DATE']).dt.date
+certificates = certificates.sort_values('DATE', ascending=False).reset_index(drop=True)
 
 READMEmd = certificates.to_html()
 
 # Add the link to the curso column
-certificates["curso"] = "<a href='" + certificates["link"] + "'>" + certificates["curso"] + "</a>"
+certificates["COURSE"] = "<a href='" + certificates["LINK"] + "'>" + certificates["COURSE"] + "</a>"
 
 # Drop the link column
-certificates = certificates.drop(columns=["link"])
+certificates = certificates.drop(columns=["LINK"])
 
 # Create a Jinja template for the table
 table_template = """
@@ -97,6 +135,10 @@ with open("template/home.html", "w") as f:
          <br>
          <h3>About Me:</h3>
          <p>{dt["aboutme"]}</p>
+         <h3>Education:</h3>
+        """+ul_educ+f"""
+         <h3>Experience:</h3>
+        """+ul_exp+f"""
          {table_html}
       </div>
    </body>
