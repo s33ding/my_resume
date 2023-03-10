@@ -37,7 +37,6 @@ for _, row in experience.iterrows():
             <li>At: {row['company']}, {row['where']}.</li>
             <li>Date: {row['start']} - {row['end']}.</li>
             <li>Description: {row['description']}.</li>
-            <li>Job Type: {row['job_type']}.</li>
             <li>Skills: {row['skills']}.</li>
         </ul>
     </li>"""
