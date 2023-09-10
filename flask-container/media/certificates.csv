@@ -1,9 +1,13 @@
-COURSE,LINK,DATE,FIELD,PLATFORM,COURSE ID
-Introduction to Docker,https://www.datacamp.com/statement-of-accomplishment/course/ae0a35c7d96183ef1ae97f56d079060be13dad11,2023-03-11,DOCKER,DataCamp,"#28,270,282"
+COURSE,LINK,DATE,FIELD,plataforma,COURSE ID
+Hadoop Quick Start,https://verify.acloud.guru/C1EE9C96F0F9,2023-09-09,Hadoop,A Cloud Guru,C1EE9C96F0F9
+Hands-on with Amazon Redshift,https://github.com/s33ding/my_resume/blob/main/my_certificates/udemy_Hands-on%20with%20Amazon%20Redshift.pdf,2023-08-07,CLOUD,Udemy,
+Feature Engineering with PySpark,https://www.datacamp.com/statement-of-accomplishment/course/587d47cff5ac8618af06d194745294229bf1461d?raw=1 ,2023-06-25,PySpark,DataCamp,"#24,169,996"
+Introduction to ChatGPT,https://www.datacamp.com/statement-of-accomplishment/course/a69af72cb15fb2560f6d551dae2ec0130a9ff172?raw=1,2023-04-07,,DataCamp,"#28,667,609"
+Introduction to Docker,https://www.datacamp.com/statement-of-accomplishment/course/ae0a35c7d96183ef1ae97f56d079060be13dad11,,Docker,DataCamp,"#28,270,282"
 Joining Data in SQL,https://www.datacamp.com/statement-of-accomplishment/course/172944c6b33621ce36a37cada9c1f7848c6dcf0f,2023-02-24,SQL,DataCamp,"#27,948,484"
 Intermediate SQL,https://www.datacamp.com/statement-of-accomplishment/course/1b99186e2d712ebebad521549ab52000a0684c5a,2023-02-12,SQL,DataCamp,"#27,907,563"
 Introduction to AWS Boto in Python,https://www.datacamp.com/statement-of-accomplishment/course/321c4f45e8a5d40f2ed59217d9dc1a01e8651c5c?raw=1,2023-02-06,AWS,DataCamp,"#23,179,911"
-Introduction to Big Data with PySpark Course,https://www.codecademy.com/profiles/robertomdiniz/certificates/895f3c0e3a564e9abea6f431ce5d87cc,2022-12-12,PYSPARK,CodeCademy,
+Introduction to Big Data with PySpark Course,https://www.codecademy.com/profiles/robertomdiniz/certificates/895f3c0e3a564e9abea6f431ce5d87cc,2022-12-12,PYSPARK,CodeCademy,63979E4559
 Cleaning Data with PySpark,https://www.datacamp.com/statement-of-accomplishment/course/894911f368f19e6318f641a3331e42f67e965244?raw=1,2022-11-15,PYSPARK,DataCamp,"#23,931,785"
 AWS Lambda - A Practical Guide,https://www.udemy.com/certificate/UC-b9c2e1b6-7f3c-4a5a-b579-57fad0a255f5/,2022-10-20,AWS,Udemy,
 Getting Started with AWS Glue,https://github.com/s33ding/my_resume/blob/main/my_certificates/AWS_SkillBuilder_Glue.pdf,2022-10-14,AWS,AWS Skill Builder,
