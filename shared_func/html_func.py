@@ -61,15 +61,20 @@ def create_html_resume(data):
                 <h3>Languages</h3>
                 <ul>
     """
+
     for language in data['languages']:
-        html_content += f"<li><strong>{language['language']}:</strong> {language['certification']}</li>"
+        html_content += (
+            f"<li><strong>{language['language']}:</strong> {language['certification']} "
+            f"- <a href='{language['link']}' target='_blank'>View certificate: (Link)</a></li>\n"
+        )
     
     html_content += f"""
                 </ul>
             </div>
             <div class="footer">
-                <button onclick="window.location.href='{data['resume_download_link']}';" class="download-btn">Download Resume</button>
-                <p>View certificates: <a href="https://github.com/s33ding/my_resume/tree/main/my_certificates">Link</a></p>
+                <button onclick="window.location.href='{data['resume_download_link']}';" class="download-btn">Download My Resume</button>
+                <button onclick="window.location.href='{data['qr_code']}';" class="download-btn">Share this Profile</button>
+                <button onclick="window.location.href='https://github.com/s33ding/my_resume/tree/main/my_certificates';" class="download-btn">View Certificates</button>
             </div>
         </div>
     </body>

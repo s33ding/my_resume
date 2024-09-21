@@ -115,7 +115,8 @@ def generate_resume_tex(resume_data):
         with doc.create(Itemize(options=NoEscape("leftmargin=0.15in, label={}"))) as itemize:
             for language in resume_data['languages']:
                 itemize.add_item(NoEscape(
-                    f"\\textbf{{{language['language']}}}: {language['certification']}"
+                    f"\\textbf{{{language['language']}}}: {language['certification']} "
+                    f"- \\href{{{language['link']}}}{{View certificate: (Link)}}"
                 ))
 
     doc.generate_pdf('latex/resume', clean_tex=False)
