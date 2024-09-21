@@ -63,5 +63,5 @@ resume_data = {
         {"language": "English", "certification": "TOEFL (Oct 2020)"},
         {"language": "English", "certification": "Casa Thomas Jefferson (Sep 2017)"}
     ],
-    "resume_download_link": "https://s33ding.s3.amazonaws.com/resume.pdf"
+    "resume_download_link": "https://s33ding.s3.us-east-1.amazonaws.com/resume.pdf"
 }
