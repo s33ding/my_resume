@@ -1,9 +1,23 @@
-# config.py
-bucket_name="s33ding"
-path_resume_pdf = "latex/resume.pdf"
+import os
+
+bucket_name = "s33ding"
+
+# Full paths
+path_resume_latex = "latex/roberto-resume"
+path_resume_pdf = f"{path_resume_latex}.pdf"
 path_index_html = "site/index.html"
 path_styles_css = "site/styles.css"
 path_qr_code = "site/media/qr_code.png"
+
+# Extract file names from paths
+file_name_resume = path_resume_pdf.split("/")[-1]
+file_name_index = path_index_html.split("/")[-1]
+file_name_styles = path_styles_css.split("/")[-1]
+file_name_qr_code = path_qr_code.split("/")[-1]
+
+# Ensure directory exists
+for path in [path_resume_pdf, path_index_html, path_styles_css, path_qr_code]:
+    os.makedirs(os.path.dirname(path), exist_ok=True)
 
 # Resume Data
 resume_data = {
@@ -64,7 +78,7 @@ resume_data = {
             {"language": "English", "certification": "TOEFL (Oct 2020)", "link":"https://github.com/s33ding/my_resume/blob/main/my_certificates/english_TOEFL_my_score.pdf"},
             {"language": "English", "certification": "Casa Thomas Jefferson (Sep 2017)","link":"https://github.com/s33ding/my_resume/blob/main/my_certificates/english_Casa%20Thomas%20Jefferson.pdf"}
     ],
-    "resume_download_link": "https://s33ding.s3.amazonaws.com/resume.pdf",
+    "resume_download_link": "https://s33ding.s3.amazonaws.com/roberto-resume.pdf",
     "qr_code": "https://s33ding.s3.amazonaws.com/qr_code.png",
     "site_link": "https://s33ding.s3.amazonaws.com/index.html"
 }
