@@ -4,14 +4,14 @@ bucket_name = "s33ding"
 
 # Full paths
 path_resume_latex = "latex/roberto-resume"
-path_resume_latex_pt = "latex/roberto-resume_pt"
+path_resume_latex_pt = "latex/roberto-resume-pt-br"
 path_resume_pdf = f"{path_resume_latex}.pdf"
 path_resume_pdf_pt = f"{path_resume_latex_pt}.pdf"
 path_index_html = "site/index.html"
-path_index_html_pt = "site/index_pt.html"
+path_index_html_pt = "site/index-pt-br.html"
 path_styles_css = "site/styles.css"
 path_qr_code = "site/media/qr_code.png"
-path_qr_code_pt = "site/media/qr_code_pt.png"
+path_qr_code_pt = "site/media/qr_code-pt-br.png"
 
 # Extract file names from paths
 file_name_resume = path_resume_pdf.split("/")[-1]
@@ -85,10 +85,10 @@ resume_data = {
             {"language": "English", "certification": "TOEFL (Oct 2020)", "link":"https://github.com/s33ding/my_resume/blob/main/my_certificates/english_TOEFL_my_score.pdf"},
             {"language": "English", "certification": "Casa Thomas Jefferson (Sep 2017)","link":"https://github.com/s33ding/my_resume/blob/main/my_certificates/english_Casa%20Thomas%20Jefferson.pdf"}
     ],
-    "resume_download_link": "https://s33ding.s3.amazonaws.com/roberto-resume_pt.pdf",
-    "qr_code": "https://s33ding.s3.amazonaws.com/qr_code_pt.png",
-    "site_translated": "https://s33ding.s3.amazonaws.com/index_pt.html",
-    "site_link": "https://s33ding.s3.amazonaws.com/index.html"
+    "resume_download_link": f"https://s33ding.s3.amazonaws.com/{file_name_resume}",
+    "qr_code": "https://s33ding.s3.amazonaws.com/qr_code.png",
+    "site_translated": f"https://s33ding.s3.amazonaws.com/{file_name_index_pt}",
+    "site_link": f"https://s33ding.s3.amazonaws.com/{file_name_index}"
 }
 
 resume_data_pt = {
@@ -150,8 +150,8 @@ resume_data_pt = {
       "link": "https://github.com/s33ding/my_resume/blob/main/my_certificates/english_Casa%20Thomas%20Jefferson.pdf"
     }
   ],
-  "resume_download_link": "https://s33ding.s3.amazonaws.com/roberto-resume_pt.pdf",
-  "qr_code": "https://s33ding.s3.amazonaws.com/qr_code_pt.png",
-  "site_link": "https://s33ding.s3.amazonaws.com/index_pt.html",
-  "site_translated": "https://s33ding.s3.amazonaws.com/index.html"
+  "resume_download_link": f"https://s33ding.s3.amazonaws.com/{file_name_resume_pt}",
+  "qr_code": f"https://s33ding.s3.amazonaws.com/qr_code-pt-br.png",
+    "site_translated": f"https://s33ding.s3.amazonaws.com/{file_name_index}",
+    "site_link": f"https://s33ding.s3.amazonaws.com/{file_name_index_pt}"
 }
