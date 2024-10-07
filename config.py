@@ -41,7 +41,7 @@ resume_data = {
         "I am an accomplished data professional with nearly three years of experience in data engineering, "
         "including two years in a full data engineer role. My expertise includes crafting robust data pipelines, "
         "implementing efficient data lakes, and orchestrating seamless data integration within cloud environments. "
-        "I have honed my skills in PySpark, Exploratory Data Analysis, serverless architecture, AWS Cloud services, "
+        "I have enhanced my skills in PySpark, Exploratory Data Analysis, serverless architecture, AWS Cloud services, "
         "Docker, and Linux. I actively manage data quality routines and implement automated testing to ensure data integrity. "
         "Currently, I am pursuing AWS Developer certification and studying for the KCNA exam while continuing my education in Machine Learning."
     ),
@@ -53,7 +53,7 @@ resume_data = {
             "dates": "Jul 2022 - Present",
             "details": [
                 "Create data pipelines",
-                "Maintain and build data storage systems on the cloud to be used by other areas of the company",
+                "Maintain and build data storage systems in the cloud to be used by other areas of the company",
                 "Analyze and extract insights from the data"
             ]
         },
@@ -69,7 +69,7 @@ resume_data = {
     ],
     "education": {
         "degree": "Bachelor’s degree in Data Science and Artificial Intelligence",
-        "institution": "The Higher Education Institute of Brasilia (IESB)",
+        "institution": "Instituto de Educação Superior de Brasília (IESB)",
         "dates": "Feb 2021 - Present"
     },
     "skills": [
@@ -101,7 +101,7 @@ resume_data_pt = {
     "linkedin": "https://www.linkedin.com/in/s33ding/",
     "github": "https://github.com/s33ding"
   },
-  "about": "Sou um profissional de dados experiente com quase três anos de experiência em engenharia de dados, incluindo dois anos em um papel pleno. Minha expertise inclui a criação de pipelines de dados robustos, implementação de lakes de dados eficientes e orquestração de integração de dados em ambientes de nuvem. Aperfeiçoei minhas habilidades em PySpark, Análise Exploratória de Dados, arquitetura serverless, serviços da AWS Cloud, Docker e Linux. Gerencio rotinas de qualidade de dados e implemento testes automatizados para garantir a integridade dos dados. Atualmente, estou me preparando para a certificação AWS Developer e estudando para o exame KCNA, além de continuar minha formação em Machine Learning.",
+  "about": "Sou um profissional de dados com quase três anos de atuação em engenharia de dados, sendo dois deles em regime de tempo integral. Tenho expertise no desenvolvimento de pipelines de dados escaláveis e eficientes, implementação de data lakes eficientes e orquestração de integração de dados em ambientes de nuvem. Aperfeiçoei minhas habilidades em PySpark, Análise Exploratória de Dados, arquitetura serverless, serviços da AWS Cloud, Docker e Linux. Gerencio rotinas de qualidade de dados e implemento testes automatizados para garantir a integridade dos dados. Atualmente, estou me preparando para a certificação AWS Developer e estudando para o exame KCNA, além de continuar minha formação em Machine Learning.",
   "experience": [
     {
       "position": "Engenheiro de Dados (Tempo Integral)",
@@ -110,7 +110,7 @@ resume_data_pt = {
       "dates": "Jul 2022 - Presente",
       "details": [
         "Criar pipelines de dados",
-        "Manter e construir sistemas de armazenamento de dados na nuvem para serem usados por outras áreas da empresa",
+        "Manter e construir sistemas de armazenamento de dados na nuvem, utilizados por outras áreas da empresa",
         "Analisar e extrair insights dos dados"
       ]
     },

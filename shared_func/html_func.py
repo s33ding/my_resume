@@ -150,7 +150,7 @@ def create_html_resume_pt(data, path):
     for language in data['languages']:
         html_content += (
             f"<li><strong>{language['language']}:</strong> {language['certification']} "
-            f"- <a href='{language['link']}' target='_blank'>View certificate: (Link)</a></li>\n"
+            f"- <a href='{language['link']}' target='_blank'>Ver certificado: (Link)</a></li>\n"
         )
     
     html_content += f"""

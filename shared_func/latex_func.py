@@ -72,7 +72,7 @@ def generate_resume_tex(resume_data, path):
         title.append(NoEscape(r"\end{center}"))
 
     # About Me Section
-    with doc.create(Section('Sobre Mim', numbering=False)):
+    with doc.create(Section('About Me', numbering=False)):
         doc.append(resume_data['about'])
 
     # Professional Experience Section
@@ -237,7 +237,7 @@ def generate_resume_tex_pt(resume_data, path):
             for language in resume_data['languages']:
                 itemize.add_item(NoEscape(
                     f"\\textbf{{{language['language']}}}: {language['certification']} "
-                    f"- \\href{{{language['link']}}}{{View certificate: (Link)}}"
+                    f"- \\href{{{language['link']}}}{{Ver certificado: (Link)}}"
                 ))
 
     doc.generate_pdf(path, clean_tex=False)
