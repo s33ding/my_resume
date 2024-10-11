@@ -1,6 +1,6 @@
 import os
 
-bucket_name = "s33ding"
+bucket_name = "robertomdiniz"
 
 # Full paths
 path_resume_latex = "latex/roberto-resume"
