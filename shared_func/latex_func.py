@@ -21,6 +21,7 @@ def generate_resume_tex(resume_data, path):
     doc.packages.append(Package("baskervillef"))
     doc.packages.append(Package("fontenc", options="T1"))
 
+
     # Add custom settings
     doc.preamble.append(NoEscape(r"\pagestyle{fancy}"))
     doc.preamble.append(NoEscape(r"\fancyhf{}"))
@@ -31,8 +32,19 @@ def generate_resume_tex(resume_data, path):
     doc.preamble.append(NoEscape(r"\addtolength{\oddsidemargin}{0.0in}"))
     doc.preamble.append(NoEscape(r"\addtolength{\evensidemargin}{0.0in}"))
     doc.preamble.append(NoEscape(r"\addtolength{\textwidth}{0.0in}"))
+
     # Adjust the top margin and vertical offset
-    doc.preamble.append(NoEscape(r"\addtolength{\topmargin}{-0.7in}"))  # Further decrease top margin
+    doc.preamble.append(NoEscape(r"\addtolength{\topmargin}{0.2in}"))  # Further decrease top margin
+    doc.preamble.append(NoEscape(r"\addtolength{\textheight}{1.0in}"))  # Increase text height to fit more content
+    doc.preamble.append(NoEscape(r"\urlstyle{same}"))
+    doc.preamble.append(NoEscape(r"\raggedright"))
+    doc.preamble.append(NoEscape(r"\setlength{\tabcolsep}{0in}"))
+    doc.preamble.append(NoEscape(r"\titleformat{\section}{\it\vspace{3pt}}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]"))
+    doc.preamble.append(NoEscape(r"\pdfgentounicode=1"))
+
+
+    # Adjust the top margin and vertical offset
+    doc.preamble.append(NoEscape(r"\addtolength{\topmargin}{-1.0in}"))  # Further decrease top margin
     doc.preamble.append(NoEscape(r"\addtolength{\textheight}{1.0in}"))  # Increase text height to fit more content
     doc.preamble.append(NoEscape(r"\urlstyle{same}"))
     doc.preamble.append(NoEscape(r"\raggedright"))
@@ -100,6 +112,14 @@ def generate_resume_tex(resume_data, path):
             f"{{{education['institution']}}}{{}}"
         ))
         doc.append(NoEscape(r"\resumeSubHeadingListEnd"))
+        doc.append(NoEscape(r"\resumeSubHeadingListStart"))
+        education = resume_data['education-2']
+        doc.append(NoEscape(
+            f"\\resumeSubheading"
+            f"{{{education['degree']}}}{{{education['dates']}}}"
+            f"{{{education['institution']}}}{{}}"
+        ))
+        doc.append(NoEscape(r"\resumeSubHeadingListEnd"))
 
     # Technical Skills Section with two columns
     with doc.create(Section('Technical Skills', numbering=False)):
@@ -154,7 +174,7 @@ def generate_resume_tex_pt(resume_data, path):
     doc.preamble.append(NoEscape(r"\addtolength{\textwidth}{0.0in}"))
     # Adjust the top margin and vertical offset
     doc.preamble.append(NoEscape(r"\addtolength{\topmargin}{-0.7in}"))  # Further decrease top margin
-    doc.preamble.append(NoEscape(r"\addtolength{\textheight}{1.0in}"))  # Increase text height to fit more content
+    doc.preamble.append(NoEscape(r"\addtolength{\textheight}{1.4in}"))  # Increase text height to fit more content
     doc.preamble.append(NoEscape(r"\urlstyle{same}"))
     doc.preamble.append(NoEscape(r"\raggedright"))
     doc.preamble.append(NoEscape(r"\setlength{\tabcolsep}{0in}"))
@@ -182,7 +202,10 @@ def generate_resume_tex_pt(resume_data, path):
         title.append(NoEscape(f"{{\\large {resume_data['title']}}} \\\\ \\vspace{{5pt}}"))
         title.append(NoEscape(r"\end{center}"))
         title.append(NoEscape(r"\begin{center}"))
+
         contact = resume_data["contact"]
+
+        title.append(NoEscape(r"\small"))  # Make only this section very small
         title.append(NoEscape(
             f"Cidade: {contact['city']} \\quad \\textbullet \\quad "
             f"\\href{{https://wa.me/qr/UYOUX2DZ7BYHI1}}{{Celular: +55 (61) 98234-0088}} \\quad \\textbullet \\quad "
@@ -190,7 +213,9 @@ def generate_resume_tex_pt(resume_data, path):
             f"\\href{{mailto:{contact['email']}}}{{Email: {contact['email']}}} \\quad \\textbullet \\quad "
             f"\\href{{{contact['github']}}}{{Github: @s33ding}}"
         ))
+        title.append(NoEscape(r"\normalsize"))  # Return to normal size for the rest of the document
         title.append(NoEscape(r"\end{center}"))
+
 
     # About Me Section
     with doc.create(Section('Sobre Mim', numbering=False)):
@@ -221,6 +246,14 @@ def generate_resume_tex_pt(resume_data, path):
             f"{{{education['institution']}}}{{}}"
         ))
         doc.append(NoEscape(r"\resumeSubHeadingListEnd"))
+        doc.append(NoEscape(r"\resumeSubHeadingListStart"))
+        education = resume_data['education-2']
+        doc.append(NoEscape(
+            f"\\resumeSubheading"
+            f"{{{education['degree']}}}{{{education['dates']}}}"
+            f"{{{education['institution']}}}{{}}"
+        ))
+        doc.append(NoEscape(r"\resumeSubHeadingListEnd"))
 
     # Technical Skills Section with two columns
     with doc.create(Section('Competências Técnicas', numbering=False)):
@@ -241,4 +274,3 @@ def generate_resume_tex_pt(resume_data, path):
                 ))
 
     doc.generate_pdf(path, clean_tex=False)
-

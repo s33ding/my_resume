@@ -27,10 +27,10 @@ def create_html_resume(data, path ):
             </div>
             <div class="section experience">
                 <h3>Professional Experience</h3>
+        <div class="experience-item">
     """
     for job in data['experience']:
         html_content += f"""
-        <div class="experience-item">
             <h4>{job['position']} <span>{job['dates']}</span></h4>
             <p>{job['company']}, {job['location']}</p>
             <ul>
@@ -40,13 +40,21 @@ def create_html_resume(data, path ):
         html_content += "</ul></div>"
     
     html_content += f"""
-            </div>
             <div class="section education">
                 <h3>Education</h3>
-                <p>{data['education']['degree']} <br>
+
+                <p><strong>{data['education']['degree']}</strong> <br>
                 {data['education']['institution']} <br>
                 <em>{data['education']['dates']}</em></p>
+
+                <p><strong>{data['education-2']['degree']}</strong> <br>
+                {data['education-2']['institution']} <br>
+                <em>{data['education-2']['dates']}</em></p>
+
             </div>
+            """
+
+    html_content += f"""
             <div class="section skills">
                 <h3>Technical Skills</h3>
                 <ul>
@@ -115,22 +123,24 @@ def create_html_resume_pt(data, path):
     """
     for job in data['experience']:
         html_content += f"""
-        <div class="experience-item">
-            <h4>{job['position']} <span>{job['dates']}</span></h4>
+            <h4>{job['position']}, <span>{job['dates']}</span></h4>
             <p>{job['company']}, {job['location']}</p>
-            <ul>
         """
         for detail in job['details']:
             html_content += f"<li>{detail}</li>"
-        html_content += "</ul></div>"
     
     html_content += f"""
             </div>
             <div class="section education">
                 <h3>Formação Acadêmica</h3>
-                <p>{data['education']['degree']} <br>
+                <p><strong>{data['education']['degree']}</strong> <br>
                 {data['education']['institution']} <br>
                 <em>{data['education']['dates']}</em></p>
+
+                <p><strong>{data['education-2']['degree']}</strong> <br>
+                {data['education-2']['institution']} <br>
+                <em>{data['education-2']['dates']}</em></p>
+
             </div>
             <div class="section skills">
                 <h3>Competências Técnicas</h3>
@@ -168,6 +178,3 @@ def create_html_resume_pt(data, path):
     """
     with open(path, "w") as file:
         file.write(html_content)
-
-
-

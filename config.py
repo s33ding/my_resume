@@ -1,5 +1,6 @@
 import os
 
+bucket_name = "s33ding"
 bucket_name = "robertomdiniz"
 
 # Full paths
@@ -25,6 +26,7 @@ file_name_qr_code_pt = path_qr_code_pt.split("/")[-1]
 # Ensure directory exists
 for path in [path_resume_pdf, path_resume_pdf_pt, path_index_html, path_styles_css, path_qr_code, path_qr_code_pt]:
     os.makedirs(os.path.dirname(path), exist_ok=True)
+
 
 # Resume Data
 resume_data = {
@@ -72,6 +74,11 @@ resume_data = {
         "institution": "Instituto de Educação Superior de Brasília (IESB)",
         "dates": "Feb 2021 - Present"
     },
+    "education-2": {
+            "degree": "Bachelor’s degree in Architecture and Urbanism",
+            "institution": "Centro Universitário de Brasília (UniCEUB)",
+            "dates": "Graduated on September 16, 2020"
+        },
     "skills": [
         "Programming: Python, SQL, Bash",
         "Cloud: AWS (Boto3, Lambda, Glue, S3, EC2, AWS CLI, Terraform, VPC, RDS, Secret Manager, IAM, SSM, QuickSight, AWS Lake Formation, Amazon Athena, EventBridge, SNS, Rekognition, RedShift, DynamoDB)",
@@ -85,10 +92,10 @@ resume_data = {
             {"language": "English", "certification": "TOEFL (Oct 2020)", "link":"https://github.com/s33ding/my_resume/blob/main/my_certificates/english_TOEFL_my_score.pdf"},
             {"language": "English", "certification": "Casa Thomas Jefferson (Sep 2017)","link":"https://github.com/s33ding/my_resume/blob/main/my_certificates/english_Casa%20Thomas%20Jefferson.pdf"}
     ],
-    "resume_download_link": f"https://s33ding.s3.amazonaws.com/{file_name_resume}",
-    "qr_code": "https://s33ding.s3.amazonaws.com/qr_code.png",
-    "site_translated": f"https://s33ding.s3.amazonaws.com/{file_name_index_pt}",
-    "site_link": f"https://s33ding.s3.amazonaws.com/{file_name_index}"
+    "resume_download_link": f"https://{bucket_name}.s3.amazonaws.com/{file_name_resume}",
+    "qr_code": "https://{bucket_name}.s3.amazonaws.com/qr_code.png",
+    "site_translated": f"https://{bucket_name}.s3.amazonaws.com/{file_name_index_pt}",
+    "site_link": f"https://{bucket_name}.s3.amazonaws.com/{file_name_index}"
 }
 
 resume_data_pt = {
@@ -129,6 +136,11 @@ resume_data_pt = {
     "institution": "Instituto de Educação Superior de Brasília (IESB)",
     "dates": "Fev 2021 - Presente"
   },
+  "education-2": {
+      "degree": "Bacharelado em Arquitetura e Urbanismo",
+      "institution": "Centro Universitário de Brasília (UniCEUB)",
+      "dates": "Graduado em 16 de Setembro de 2020"
+    },
   "skills": [
     "Programação: Python, SQL, Bash",
     "Nuvem: AWS (Boto3, Lambda, Glue, S3, EC2, AWS CLI, Terraform, VPC, RDS, Secret Manager, IAM, SSM, QuickSight, AWS Lake Formation, Amazon Athena, EventBridge, SNS, Rekognition, RedShift, DynamoDB)",
@@ -150,8 +162,9 @@ resume_data_pt = {
       "link": "https://github.com/s33ding/my_resume/blob/main/my_certificates/english_Casa%20Thomas%20Jefferson.pdf"
     }
   ],
-  "resume_download_link": f"https://s33ding.s3.amazonaws.com/{file_name_resume_pt}",
-  "qr_code": f"https://s33ding.s3.amazonaws.com/qr_code-pt-br.png",
-    "site_translated": f"https://s33ding.s3.amazonaws.com/{file_name_index}",
-    "site_link": f"https://s33ding.s3.amazonaws.com/{file_name_index_pt}"
+  "resume_download_link": f"https://{bucket_name}.s3.amazonaws.com/{file_name_resume_pt}",
+  "qr_code": f"https://{bucket_name}.s3.amazonaws.com/qr_code-pt-br.png",
+    "site_translated": f"https://{bucket_name}.s3.amazonaws.com/{file_name_index}",
+    "site_link": f"https://{bucket_name}.s3.amazonaws.com/{file_name_index_pt}"
 }
+
