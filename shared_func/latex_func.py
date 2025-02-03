@@ -129,6 +129,10 @@ def generate_resume_tex(resume_data, path):
             doc.append(NoEscape(f"\\item {skill}"))
         doc.append(NoEscape(r"\resumeItemListEnd"))
         doc.append(NoEscape(r"\end{multicols}"))
+        # Add a line for certificate link
+        doc.append(NoEscape(r"\vspace{0.5em}"))  # Add some vertical space
+    doc.append(NoEscape(r"\textbf{Certificates:} \href{" + resume_data['accomplishments'] + "}{View my certifications}"))
+
 
     # Languages Section
     with doc.create(Section('Languages', numbering=False)):
@@ -263,6 +267,9 @@ def generate_resume_tex_pt(resume_data, path):
             doc.append(NoEscape(f"\\item {skill}"))
         doc.append(NoEscape(r"\resumeItemListEnd"))
         doc.append(NoEscape(r"\end{multicols}"))
+        doc.append(NoEscape(r"\vspace{0.5em}"))  # Add some vertical space
+    doc.append(NoEscape(r"\textbf{Certificados:} \href{" + resume_data['accomplishments'] + "}{Veja meus certificados}"))
+
 
     # Languages Section
     with doc.create(Section('Idiomas', numbering=False)):
@@ -274,3 +281,4 @@ def generate_resume_tex_pt(resume_data, path):
                 ))
 
     doc.generate_pdf(path, clean_tex=False)
+

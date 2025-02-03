@@ -10,9 +10,14 @@ path_resume_pdf = f"{path_resume_latex}.pdf"
 path_resume_pdf_pt = f"{path_resume_latex_pt}.pdf"
 path_index_html = "site/index.html"
 path_index_html_pt = "site/index-pt-br.html"
+path_accomplishments_html = "accomplishments.html"
+
 path_styles_css = "site/styles.css"
 path_qr_code = "site/media/qr_code.png"
 path_qr_code_pt = "site/media/qr_code-pt-br.png"
+
+accomplishments_csv = "my_certificates/learning_records/accomplishments.csv"
+accomplishments_html = "site/accomplishments.html"
 
 # Extract file names from paths
 file_name_resume = path_resume_pdf.split("/")[-1]
@@ -40,13 +45,12 @@ resume_data = {
         "github": "https://github.com/s33ding"
     },
     "about": (
-        "I am an accomplished data professional with nearly three years of experience in data engineering, "
-        "including two years in a full data engineer role. My expertise includes crafting robust data pipelines, "
-        "implementing efficient data lakes, and orchestrating seamless data integration within cloud environments. "
-        "I have enhanced my skills in PySpark, Exploratory Data Analysis, serverless architecture, AWS Cloud services, "
-        "Docker, and Linux. I actively manage data quality routines and implement automated testing to ensure data integrity. "
-        "Currently, I am pursuing AWS Developer certification and studying for the KCNA exam while continuing my education in Machine Learning."
+        "I am a data engineer with nearly three years of experience in building scalable data pipelines, "
+        "managing data lakes, and integrating cloud solutions. Skilled in PySpark, AWS, Docker, and Linux, "
+        "I focus on data quality, automation, and efficiency. Currently, I am pursuing AWS Developer certification "
+        "and preparing for the KCNA exam while expanding my knowledge in Machine Learning."
     ),
+
     "experience": [
         {
             "position": "Data Engineer (Full-Time)",
@@ -79,6 +83,15 @@ resume_data = {
             "institution": "Centro Universitário de Brasília (UniCEUB)",
             "dates": "Graduated on September 16, 2020"
         },
+    "certificates": [
+        {
+        "course": "AWS Certified Cloud Practitioner (CLF-C01)",
+        "link": "https://www.credly.com/badges/e84a8faf-0385-4c17-b24e-f8caa5ff1e88/linked_in_profile",
+        "date": "2023-11-20",
+        "expires": "2026-11-20"
+        }
+    ]
+    ,
     "skills": [
         "Programming: Python, SQL, Bash",
         "Cloud: AWS (Boto3, Lambda, Glue, S3, EC2, AWS CLI, Terraform, VPC, RDS, Secret Manager, IAM, SSM, QuickSight, AWS Lake Formation, Amazon Athena, EventBridge, SNS, Rekognition, RedShift, DynamoDB)",
@@ -95,8 +108,10 @@ resume_data = {
     "resume_download_link": f"https://{bucket_name}.s3.amazonaws.com/{file_name_resume}",
     "qr_code": "https://{bucket_name}.s3.amazonaws.com/qr_code.png",
     "site_translated": f"https://{bucket_name}.s3.amazonaws.com/{file_name_index_pt}",
-    "site_link": f"https://{bucket_name}.s3.amazonaws.com/{file_name_index}"
+    "site_link": f"https://{bucket_name}.s3.amazonaws.com/{file_name_index}",
+    "accomplishments": f"https://{bucket_name}.s3.amazonaws.com/{path_accomplishments_html}"
 }
+
 
 resume_data_pt = {
   "name": "Roberto Moreira Diniz",
@@ -108,7 +123,13 @@ resume_data_pt = {
     "linkedin": "https://www.linkedin.com/in/s33ding/",
     "github": "https://github.com/s33ding"
   },
-  "about": "Sou um profissional de dados com quase três anos de atuação em engenharia de dados, sendo dois deles em regime de tempo integral. Tenho expertise no desenvolvimento de pipelines de dados escaláveis e eficientes, implementação de data lakes eficientes e orquestração de integração de dados em ambientes de nuvem. Aperfeiçoei minhas habilidades em PySpark, Análise Exploratória de Dados, arquitetura serverless, serviços da AWS Cloud, Docker e Linux. Gerencio rotinas de qualidade de dados e implemento testes automatizados para garantir a integridade dos dados. Atualmente, estou me preparando para a certificação AWS Developer e estudando para o exame KCNA, além de continuar minha formação em Machine Learning.",
+  "about": (
+        "Sou um engenheiro de dados com quase três anos de experiência no desenvolvimento de pipelines escaláveis, "
+        "gerenciamento de data lakes e integração de soluções em nuvem. Especialista em PySpark, AWS, Docker e Linux, "
+        "foco na qualidade de dados, automação e eficiência. Atualmente, estou me preparando para a certificação AWS Developer "
+        "e para o exame KCNA, além de expandir meus conhecimentos em Machine Learning."
+    ),
+
   "experience": [
     {
       "position": "Engenheiro de Dados (Tempo Integral)",
@@ -141,6 +162,16 @@ resume_data_pt = {
       "institution": "Centro Universitário de Brasília (UniCEUB)",
       "dates": "Graduado em 16 de Setembro de 2020"
     },
+  "certificates": [
+        {
+        "course": "AWS Certified Cloud Practitioner (CLF-C01) - Curso Preparatório",
+        "link": "https://www.credly.com/badges/e84a8faf-0385-4c17-b24e-f8caa5ff1e88/linked_in_profile",
+        "platform": "Treinamento e Certificação da Amazon Web Services",
+        "date": "2023-11-20",
+        "expires": "2026-11-20"
+        }
+    ],
+
   "skills": [
     "Programação: Python, SQL, Bash",
     "Nuvem: AWS (Boto3, Lambda, Glue, S3, EC2, AWS CLI, Terraform, VPC, RDS, Secret Manager, IAM, SSM, QuickSight, AWS Lake Formation, Amazon Athena, EventBridge, SNS, Rekognition, RedShift, DynamoDB)",
@@ -165,6 +196,7 @@ resume_data_pt = {
   "resume_download_link": f"https://{bucket_name}.s3.amazonaws.com/{file_name_resume_pt}",
   "qr_code": f"https://{bucket_name}.s3.amazonaws.com/qr_code-pt-br.png",
     "site_translated": f"https://{bucket_name}.s3.amazonaws.com/{file_name_index}",
-    "site_link": f"https://{bucket_name}.s3.amazonaws.com/{file_name_index_pt}"
+    "site_link": f"https://{bucket_name}.s3.amazonaws.com/{file_name_index_pt}",
+    "accomplishments": f"https://{bucket_name}.s3.amazonaws.com/{path_accomplishments_html}"
 }
 

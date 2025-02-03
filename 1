@@ -120,22 +120,20 @@ def create_html_resume_pt(data, path):
             </div>
             <div class="section experience">
                 <h3>Experiência Profissional</h3>
-        <div class="experience-item">
     """
     for job in data['experience']:
         html_content += f"""
-            <h4>{job['position']} <span>{job['dates']}</span></h4>
+            <h4>{job['position']}, <span>{job['dates']}</span></h4>
             <p>{job['company']}, {job['location']}</p>
-            <ul>
         """
         for detail in job['details']:
             html_content += f"<li>{detail}</li>"
         html_content += "</ul></div>"
     
     html_content += f"""
+            </div>
             <div class="section education">
                 <h3>Formação Acadêmica</h3>
-
                 <p><strong>{data['education']['degree']}</strong> <br>
                 {data['education']['institution']} <br>
                 <em>{data['education']['dates']}</em></p>
