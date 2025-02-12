@@ -2,7 +2,7 @@ import pandas as pd
 
 def load_data(file_path):
     df = pd.read_csv(file_path)
-    df = df[['course', 'hours', 'link', 'plataform', 'date']]
+    df = df[['course', 'hours', 'link', 'plataform', 'date', 'type']]
     df['year'] = pd.to_datetime(df['date'], errors='coerce').dt.year
     return df
 
@@ -14,12 +14,17 @@ def generate_platform_options(df):
     platforms = df['plataform'].dropna().astype(str).unique()
     return "\n".join(f"<option value='{platform}'>{platform}</option>" for platform in sorted(platforms))
 
+def generate_type_options(df):
+    types = df['type'].dropna().astype(str).unique()
+    return "\n".join(f"<option value='{t}'>{t}</option>" for t in sorted(types))
+
 def generate_table_rows(df):
     rows = "\n".join(f"""
-        <tr data-year="{row['year']}" data-hours="{row['hours']}" data-platform="{row['plataform']}">
+        <tr data-year="{row['year']}" data-hours="{row['hours']}" data-platform="{row['plataform']}" data-type="{row['type']}">
             <td>{row['course']}</td>
             <td>{row['hours']}</td>
             <td>{row['plataform']}</td>
+            <td>{row['type']}</td>
             <td>{row['date']}</td>
             <td><a href="{row['link']}" target="_blank">View</a></td>
         </tr>
@@ -45,27 +50,38 @@ def generate_html(df):
 <body>
     <h2 style="text-align: center;">Accomplishments Dashboard</h2>
     <input type="text" id="search" onkeyup="filterTable()" placeholder="Search for courses..">
+
     <label for="yearFilter">Filter by Year:</label>
     <select id="yearFilter" onchange="filterData()">
         <option value="">All Years</option>
         {generate_year_options(df)}
     </select>
+
     <label for="platformFilter">Filter by Platform:</label>
     <select id="platformFilter" onchange="filterData()">
         <option value="">All Platforms</option>
         {generate_platform_options(df)}
     </select>
+
+    <label for="typeFilter">Filter by Type:</label>
+    <select id="typeFilter" onchange="filterData()">
+        <option value="">All Types</option>
+        {generate_type_options(df)}
+    </select>
+
     <div>
         <p><strong>Total Courses:</strong> <span id="totalCourses">0</span></p>
         <p><strong>Total Hours:</strong> <span id="totalHours">0</span></p>
     </div>
+
     <table id="data-table">
         <thead>
             <tr>
                 <th onclick="sortTable(0, 'str')">Course</th>
                 <th onclick="sortTable(1, 'num')">Hours</th>
                 <th onclick="sortTable(2, 'str')">Platform</th>
-                <th onclick="sortTable(3, 'str')">Date</th>
+                <th onclick="sortTable(3, 'str')">Type</th>
+                <th onclick="sortTable(4, 'str')">Date</th>
                 <th>Link</th>
             </tr>
         </thead>
@@ -73,13 +89,14 @@ def generate_html(df):
             {generate_table_rows(df)}
         </tbody>
     </table>
+
     <script>
         function updateStatistics() {{
             var table = document.getElementById("data-table");
             var tr = table.getElementsByTagName("tr");
             var totalCourses = 0;
             var totalHours = 0;
-            
+
             for (var i = 1; i < tr.length; i++) {{
                 if (tr[i].style.display !== "none") {{
                     totalCourses++;
@@ -94,15 +111,41 @@ def generate_html(df):
         function filterData() {{
             var yearFilter = document.getElementById("yearFilter").value;
             var platformFilter = document.getElementById("platformFilter").value.toLowerCase();
+            var typeFilter = document.getElementById("typeFilter").value.toLowerCase();
             var table = document.getElementById("data-table");
             var tr = table.getElementsByTagName("tr");
+
             for (var i = 1; i < tr.length; i++) {{
                 var rowYear = tr[i].getAttribute("data-year");
                 var rowPlatform = tr[i].getAttribute("data-platform").toLowerCase();
-                if ((yearFilter === "" || rowYear === yearFilter) && (platformFilter === "" || rowPlatform === platformFilter)) {{
+                var rowType = tr[i].getAttribute("data-type").toLowerCase();
+
+                if ((yearFilter === "" || rowYear === yearFilter) &&
+                    (platformFilter === "" || rowPlatform === platformFilter) &&
+                    (typeFilter === "" || rowType === typeFilter)) {{
                     tr[i].style.display = "";
                 }} else {{
                     tr[i].style.display = "none";
+                }}
+            }}
+            updateStatistics();
+        }}
+
+        function filterTable() {{
+            var input = document.getElementById("search");
+            var filter = input.value.toLowerCase();
+            var table = document.getElementById("data-table");
+            var tr = table.getElementsByTagName("tr");
+
+            for (var i = 1; i < tr.length; i++) {{
+                var td = tr[i].getElementsByTagName("td")[0]; 
+                if (td) {{
+                    var txtValue = td.textContent || td.innerText;
+                    if (txtValue.toLowerCase().indexOf(filter) > -1) {{
+                        tr[i].style.display = "";
+                    }} else {{
+                        tr[i].style.display = "none";
+                    }}
                 }}
             }}
             updateStatistics();
