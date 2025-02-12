@@ -151,6 +151,26 @@ def generate_html(df):
             updateStatistics();
         }}
 
+        function sortTable(n, type) {{
+            var table = document.getElementById("data-table");
+            var rows = Array.from(table.rows).slice(1);
+            var ascending = table.getAttribute("data-sort-dir") !== "asc";
+            table.setAttribute("data-sort-dir", ascending ? "asc" : "desc");
+
+            rows.sort((rowA, rowB) => {{
+                var cellA = rowA.cells[n].innerText.trim();
+                var cellB = rowB.cells[n].innerText.trim();
+                
+                if (type === "num") {{
+                    return ascending ? cellA - cellB : cellB - cellA;
+                }} else {{
+                    return ascending ? cellA.localeCompare(cellB) : cellB.localeCompare(cellA);
+                }}
+            }});
+
+            rows.forEach(row => table.appendChild(row));
+        }}
+
         window.onload = updateStatistics;
     </script>
 </body>
@@ -162,7 +182,6 @@ def save_html(output_file, content):
         file.write(content)
     print(f"Dashboard generated: {output_file}")
 
-# Main execution
 def accomplishments_html(data, output_file):
     df = load_data(data)
     html_content = generate_html(df)
