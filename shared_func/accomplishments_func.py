@@ -2,7 +2,7 @@ import pandas as pd
 
 def load_data(file_path):
     df = pd.read_csv(file_path)
-    df = df[['course', 'hours', 'link', 'plataform', 'date', 'type']]
+    df = df[['name', 'hours', 'link', 'plataform', 'date', 'type']]
     df['year'] = pd.to_datetime(df['date'], errors='coerce').dt.year
     return df
 
@@ -21,7 +21,7 @@ def generate_type_options(df):
 def generate_table_rows(df):
     rows = "\n".join(f"""
         <tr data-year="{row['year']}" data-hours="{row['hours']}" data-platform="{row['plataform']}" data-type="{row['type']}">
-            <td>{row['course']}</td>
+            <td>{row['name']}</td>
             <td>{row['hours']}</td>
             <td>{row['plataform']}</td>
             <td>{row['type']}</td>

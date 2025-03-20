@@ -63,6 +63,37 @@
         </thead>
         <tbody>
             
+        <tr data-year="2025" data-hours="nan" data-platform="Amazon Web Services Training and Certification" data-type="Professional Certification">
+            <td>AWS Certified Developer - Associate
+</td>
+            <td>nan</td>
+            <td>Amazon Web Services Training and Certification</td>
+            <td>Professional Certification</td>
+            <td>2025-03-17</td>
+            <td><a href="https://www.credly.com/badges/c90e1b8d-a98d-41f7-9084-724fbf3660bd/linked_in_profile" target="_blank">View</a></td>
+        </tr>
+    
+
+        <tr data-year="2025" data-hours="2.0" data-platform="DataCamp" data-type="Course">
+            <td>Intermediate Git</td>
+            <td>2.0</td>
+            <td>DataCamp</td>
+            <td>Course</td>
+            <td>2025-03-01</td>
+            <td><a href="https://github.com/s33ding/my_resume/blob/main/my_certificates/datacamp_Intermediate%20Git.pdf" target="_blank">View</a></td>
+        </tr>
+    
+
+        <tr data-year="2025" data-hours="2.0" data-platform="DataCamp" data-type="Course">
+            <td>Introduction to Git</td>
+            <td>2.0</td>
+            <td>DataCamp</td>
+            <td>Course</td>
+            <td>2025-02-07</td>
+            <td><a href="https://github.com/s33ding/my_resume/blob/main/my_certificates/datacamp_Introduction%20to%20Git.pdf" target="_blank">View</a></td>
+        </tr>
+    
+
         <tr data-year="2025" data-hours="4.0" data-platform="DataCamp" data-type="Course">
             <td>Intermediate Docker</td>
             <td>4.0</td>
@@ -684,6 +715,26 @@
                 }
             }
             updateStatistics();
+        }
+
+        function sortTable(n, type) {
+            var table = document.getElementById("data-table");
+            var rows = Array.from(table.rows).slice(1);
+            var ascending = table.getAttribute("data-sort-dir") !== "asc";
+            table.setAttribute("data-sort-dir", ascending ? "asc" : "desc");
+
+            rows.sort((rowA, rowB) => {
+                var cellA = rowA.cells[n].innerText.trim();
+                var cellB = rowB.cells[n].innerText.trim();
+                
+                if (type === "num") {
+                    return ascending ? cellA - cellB : cellB - cellA;
+                } else {
+                    return ascending ? cellA.localeCompare(cellB) : cellB.localeCompare(cellA);
+                }
+            });
+
+            rows.forEach(row => table.appendChild(row));
         }
 
         window.onload = updateStatistics;

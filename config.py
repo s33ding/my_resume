@@ -45,12 +45,9 @@ resume_data = {
         "github": "https://github.com/s33ding"
     },
     "about": (
-        "I am a data engineer with nearly three years of experience in building scalable data pipelines, "
+        "I am a data engineer with nearly three years of experience building scalable data pipelines, "
         "managing data lakes, and integrating cloud solutions. Skilled in PySpark, AWS, Docker, and Linux, "
-        "I focus on data quality, automation, and efficiency. Currently, I am pursuing AWS Developer certification "
-        "and preparing for the KCNA exam while expanding my knowledge in Machine Learning."
-    ),
-
+        "I focus on data quality, automation, and efficiency. I am an AWS Developer certified professional preparing for the KCNA exam."),
     "experience": [
         {
             "position": "Data Engineer (Full-Time)",
@@ -88,7 +85,13 @@ resume_data = {
         "course": "AWS Certified Cloud Practitioner (CLF-C01)",
         "link": "https://www.credly.com/badges/e84a8faf-0385-4c17-b24e-f8caa5ff1e88/linked_in_profile",
         "date": "2023-11-20",
-        "expires": "2026-11-20"
+        "expires": "2028-03-17"
+        },
+        {
+        "course": "AWS Certified Developer Associate (DVA-C02)",
+        "link": "https://www.credly.com/badges/e84a8faf-0385-4c17-b24e-f8caa5ff1e88/linked_in_profile",
+        "date": "2023-11-20",
+        "expires": "2028-03-17"
         }
     ]
     ,
@@ -124,10 +127,10 @@ resume_data_pt = {
     "github": "https://github.com/s33ding"
   },
   "about": (
-        "Sou um engenheiro de dados com quase três anos de experiência no desenvolvimento de pipelines escaláveis, "
-        "gerenciamento de data lakes e integração de soluções em nuvem. Especialista em PySpark, AWS, Docker e Linux, "
-        "foco na qualidade de dados, automação e eficiência. Atualmente, estou me preparando para a certificação AWS Developer "
-        "e para o exame KCNA, além de expandir meus conhecimentos em Machine Learning."
+    "Sou um engenheiro de dados com quase três anos de experiência no desenvolvimento de pipelines escaláveis, "
+    "gerenciamento de data lakes e integração de soluções em nuvem. Especialista em PySpark, AWS, Docker e Linux, "
+    "com foco na qualidade de dados, automação e eficiência. Tenho a certificação AWS Developer Associate e atualmente estou me preparando "
+    "para o exame KCNA."
     ),
 
   "experience": [
@@ -164,12 +167,20 @@ resume_data_pt = {
     },
   "certificates": [
         {
-        "course": "AWS Certified Cloud Practitioner (CLF-C01) - Curso Preparatório",
+        "course": "AWS Certified Cloud Practitioner (CLF-C01)",
         "link": "https://www.credly.com/badges/e84a8faf-0385-4c17-b24e-f8caa5ff1e88/linked_in_profile",
         "platform": "Treinamento e Certificação da Amazon Web Services",
         "date": "2023-11-20",
-        "expires": "2026-11-20"
-        }
+        "expires": "2028-03-17"
+        },
+        {
+        "course": "AWS Certified Developer Associate (DVA-C02)",
+        "link": "https://www.credly.com/badges/c90e1b8d-a98d-41f7-9084-724fbf3660bd/linked_in_profile",
+        "platform": "Treinamento e Certificação da Amazon Web Services",
+        "date": "2025-03-17",
+        "expires": "2028-03-17"
+        },
+
     ],
 
   "skills": [
