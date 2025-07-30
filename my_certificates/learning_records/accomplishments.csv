@@ -1,4 +1,6 @@
 name,hours,link,plataform,date,expires,type,hashtag,id_certificate,original_link
+"Kubernetes and Cloud Native Associate
+(KCNA)",7,https://github.com/s33ding/my_resume/blob/main/my_certificates/plural_sight_kcna.pdf,Pluralsight,2025-07-28,,Course,KUBERNETES,c189c10d-68c6-4a3b-b409-d3382a14e30c,https://app.pluralsight.com/learner/user/ilx/c189c10d-68c6-4a3b-b409-d3382a14e30c/certificate
 Introduction to AI Agents,1.5,https://github.com/s33ding/my_resume/blob/main/my_certificates/datacamp_Introduction%20to%20AI%20Agents.pdf,DataCamp,2025-07-25,,Course,AI,"#42,053,009",https://www.datacamp.com/statement-of-accomplishment/course/095c981b92f8f8cf78ef5ab361da7658be9b0f90?raw=1
 Introduction to Apache Kafka,2,https://github.com/s33ding/my_resume/blob/main/my_certificates/datacamp_introduction_to_kafka.pdf,DataCamp,2025-05-23,,Course,KAFKA,"#36,251,178",https://www.datacamp.com/statement-of-accomplishment/course/f4a364a79d3b1a2e8fac1565d760afb0a0a6e304?raw=1
 GitHub Foundations Certificate,NULL,https://www.credly.com/badges/94f4f4dd-00a8-4d5e-a179-45f94c5ef785/linked_in?t=swhg11,GitHub,2025-05-18,2028-05-18,Professional Certification,GIT,,
