@@ -45,9 +45,11 @@ resume_data = {
         "github": "https://github.com/s33ding"
     },
     "about": (
-        "I am a data engineer with nearly three years of experience building scalable data pipelines, "
+        "I am a data engineer with three years of experience building scalable data pipelines, "
         "managing data lakes, and integrating cloud solutions. Skilled in PySpark, AWS, Docker, and Linux, "
-        "I focus on data quality, automation, and efficiency. I am an AWS Developer certified professional preparing for the KCNA exam."),
+        "I focus on data quality, automation, and efficiency. I hold the AWS Developer Associate and KCNA certifications, "
+        "and am currently preparing for the CKA and AWS DevOps Engineer Professional exams."
+    ),
     "experience": [
         {
             "position": "Data Engineer (Full-Time)",
@@ -109,7 +111,7 @@ resume_data = {
             {"language": "English", "certification": "Casa Thomas Jefferson (Sep 2017)","link":"https://github.com/s33ding/my_resume/blob/main/my_certificates/english_Casa%20Thomas%20Jefferson.pdf"}
     ],
     "resume_download_link": f"https://{bucket_name}.s3.amazonaws.com/{file_name_resume}",
-    "qr_code": "https://{bucket_name}.s3.amazonaws.com/qr_code.png",
+    "qr_code": f"https://{bucket_name}.s3.amazonaws.com/qr_code.png",
     "site_translated": f"https://{bucket_name}.s3.amazonaws.com/{file_name_index_pt}",
     "site_link": f"https://{bucket_name}.s3.amazonaws.com/{file_name_index}",
     "accomplishments": f"https://{bucket_name}.s3.amazonaws.com/{path_accomplishments_html}"
@@ -127,11 +129,11 @@ resume_data_pt = {
     "github": "https://github.com/s33ding"
   },
   "about": (
-    "Sou um engenheiro de dados com quase três anos de experiência no desenvolvimento de pipelines escaláveis, "
+    "Sou um engenheiro de dados com três anos de experiência no desenvolvimento de pipelines escaláveis, "
     "gerenciamento de data lakes e integração de soluções em nuvem. Especialista em PySpark, AWS, Docker e Linux, "
-    "com foco na qualidade de dados, automação e eficiência. Tenho a certificação AWS Developer Associate e atualmente estou me preparando "
-    "para o exame KCNA."
-    ),
+    "com foco na qualidade de dados, automação e eficiência. Possuo as certificações AWS Developer Associate e KCNA. "
+    "Atualmente estou me preparando para os exames CKA e AWS DevOps Engineer Professional."
+),
 
   "experience": [
     {
