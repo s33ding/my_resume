@@ -130,11 +130,12 @@ resume_data_pt = {
   },
   "about": (
     "Sou um engenheiro de dados com três anos de experiência no desenvolvimento de pipelines escaláveis, "
-    "gerenciamento de data lakes e integração de soluções em nuvem. Especialista em PySpark, AWS, Docker e Linux, "
-    "com foco na qualidade de dados, automação e eficiência. Possuo as certificações AWS Developer Associate e KCNA. "
-    "Atualmente estou me preparando para os exames CKA e AWS DevOps Engineer Professional."
-),
-
+    "gerenciamento de data lakes e integração de soluções em nuvem. "
+    "Especialista em PySpark, AWS, Docker e Linux, com foco na qualidade de dados, automação e eficiência. "
+    "Possuo as certificações AWS Developer Associate e KCNA. "
+    "Atualmente, estou me preparando para os exames CKA e AWS DevOps Engineer Professional, "
+    "com o objetivo de expandir meu conhecimento em Kubernetes e práticas de DevOps."
+    ),
   "experience": [
     {
       "position": "Engenheiro de Dados (Tempo Integral)",
