@@ -1,5 +1,7 @@
 from pylatex import Document, Section, Tabularx, Command, Package, NewLine, Itemize, NoEscape
 from pylatex.utils import italic, bold
+import subprocess
+import os
 
 def generate_resume_tex(resume_data, path):
     # Create a new LaTeX document
@@ -143,6 +145,7 @@ def generate_resume_tex(resume_data, path):
                     f"- \\href{{{language['link']}}}{{View certificate: (Link)}}"
                 ))
 
+    # Generate tex and compile PDF in latex directory
     doc.generate_pdf(path, clean_tex=False)
 
 
@@ -280,5 +283,6 @@ def generate_resume_tex_pt(resume_data, path):
                     f"- \\href{{{language['link']}}}{{Ver certificado: (Link)}}"
                 ))
 
+    # Generate tex and compile PDF in latex directory
     doc.generate_pdf(path, clean_tex=False)
 
