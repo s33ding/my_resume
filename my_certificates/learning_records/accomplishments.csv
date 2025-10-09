@@ -1,4 +1,6 @@
 name,hours,link,plataform,date,expires,type,hashtag,id_certificate,original_link
+"Deploy Serverless Functions Using AWS
+SAM",0.6,https://github.com/s33ding/my_resume/blob/main/my_certificates/plural_sight_Deploy%20Serverless%20Functions%20Using%20AWS.pdf,Pluralsight,2025-10-09,,Course,AWS,e9fc71c1-dd11-4652-aa55-4e8b062c6b9a,https://app.pluralsight.com/learner/user/courses/v2/e9fc71c1-dd11-4652-aa55-4e8b062c6b9a/certificate
 Pre Security,7.5,https://github.com/s33ding/my_resume/blob/main/my_certificates/thm_pre_security.pdf,TryHackMe,2025-09-30,,Course,SECURITY,THM-SVJJMCIXON,https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-SVJJMCIXON.pdf
 Agile Fundamentals,1.5,https://github.com/s33ding/my_resume/blob/main/my_certificates/plural_sight_Agile%20Fundamentals.pdf,Pluralsight,2025-08-27,,Course,AGILE,d2de638c-920f-494f-af34-7e865b72d615,https://app.pluralsight.com/learner/user/courses/v2/d2de638c-920f-494f-af34-7e865b72d615/certificate
 Introduction to Amazon Q,0.3,https://github.com/s33ding/my_resume/blob/main/my_certificates/plural_sight_Introduction%20to%20Amazon%20Q.pdf,Pluralsight,2025-07-28,,Course,"AI, AWS",537dace9-0704-4037-9da2-1382a4f8bb85,https://app.pluralsight.com/learner/user/courses/v2/537dace9-0704-4037-9da2-1382a4f8bb85/certificate
