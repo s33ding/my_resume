@@ -1,10 +1,15 @@
 import config
 from shared_func.html_func import create_html_resume, create_html_resume_pt
 from shared_func.latex_func import generate_resume_tex, generate_resume_tex_pt
-from shared_func.s3_func import upload_file_to_s3
+from shared_func.s3_func import upload_file_to_s3, sync_folder_to_s3
 from shared_func.accomplishments_func import  accomplishments_html
 import os
 import qrcode
+
+def sync_certificates():
+    """Sync certificate files to S3"""
+    certificates_path = os.path.join(os.path.dirname(__file__), 'my_certificates')
+    return sync_folder_to_s3(certificates_path, config.bucket_name, 'accomplishments')
 
 
 
@@ -39,4 +44,7 @@ def generate_resume_files_pt(data):
 # Generate both files
 generate_resume_files(config.resume_data)
 generate_resume_files_pt(config.resume_data_pt)
+
+# Sync certificates to S3
+sync_certificates()
 
