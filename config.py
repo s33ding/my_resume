@@ -98,15 +98,16 @@ resume_data = {
     ]
     ,
     "skills": [
-        "Programming: Python, SQL, Bash, Cryptography",
-        "Cloud: AWS (Boto3, Lambda, Glue, S3, EC2, AWS CLI, Terraform, VPC, RDS, Secret Manager, IAM, SSM, QuickSight, AWS Lake Formation, Amazon Athena, EventBridge, SNS, Rekognition, RedShift, DynamoDB, Kinesis, SAM, Amazon Q, Bedrock, CloudWatch, KMS, CodeBuild, EKS, ECR)",
-        "Databases: PostgreSQL, MySQL, Redis, MongoDB, Hadoop",
-        "Data Analysis: Pandas, EDA, Probability, Statistics, Sympy, Scipy, Itertools, NumPy",
-        "Data Processing: Docker, Git, PySpark, Shell scripting, Regex, Vim, Airflow, Crontab, Kafka",
-        "Machine Learning: Scikit-learn, MLlib (Spark), spaCy",
-        "Monitoring: Prometheus, Grafana",
-        "Testing: Unit Testing, Data Quality, CI/CD",
-        "Others: Flask, Django, PowerBI, Plotly, MetaBase, Linux Servers, Streamlit"
+        "Programming: Python, SQL, Bash",
+        "Cloud & Infrastructure: AWS (Boto3, Lambda, Glue, S3, EC2, AWS CLI, CloudFormation, Terraform, VPC, RDS, IAM, SSM, QuickSight, Lake Formation, Amazon Athena, EventBridge, SNS, RedShift, DynamoDB, Kinesis, Amazon Q, Bedrock, CloudWatch, KMS, CodeBuild, EKS, ECR, API Gateway, Cognito, Route53, ACM)",
+        "DevSecOps: Docker, Git, CI/CD, Chaos Engineering, Kubernetes, Security, Least Privilege Access, Cryptography",
+        "Data Engineering: PySpark, Airflow, Kafka, Data Quality",
+        "AI & Machine Learning: Scikit-learn, MLlib (Spark), spaCy, LLMOps, AI Agents",
+        "Databases: PostgreSQL, MySQL, Redis, MongoDB, Hadoop, SQLite",
+        "Data Analysis: Pandas, EDA, Statistics, Scipy, NumPy",
+        "Monitoring & Testing: Prometheus, Grafana, Pytest",
+        "Web & Visualization: Flask, Django, PowerBI, Plotly, MetaBase, Streamlit",
+        "Systems: Linux Servers"
     ],
     "languages": [
             {"language": "English", "certification": "TOEFL (Oct 2020)", "link":"https://github.com/s33ding/my_resume/blob/main/my_certificates/english_TOEFL_my_score.pdf"},
@@ -189,15 +190,16 @@ resume_data_pt = {
     ],
 
   "skills": [
-    "Programação: Python, SQL, Bash, Criptografia",
-    "Nuvem: AWS (Boto3, Lambda, Glue, S3, EC2, AWS CLI, Terraform, VPC, RDS, Secret Manager, IAM, SSM, QuickSight, AWS Lake Formation, Amazon Athena, EventBridge, SNS, Rekognition, RedShift, DynamoDB, Kinesis, SAM, Amazon Q, Bedrock, CloudWatch, KMS, CodeBuild, EKS, ECR)",
-    "Bancos de Dados: PostgreSQL, MySQL, Redis, MongoDB, Hadoop",
-    "Análise de Dados: Pandas, AED, Probabilidade, Estatística, Sympy, Scipy, Itertools, NumPy",
-    "Processamento de Dados: Docker, Git, PySpark, Shell scripting, Regex, Vim, Airflow, Crontab, Kafka",
-    "Machine Learning: Scikit-learn, MLlib (Spark), spaCy",
-    "Monitoramento: Prometheus, Grafana",
-    "Testes: Testes Unitários, Qualidade de Dados, CI/CD",
-    "Outros: Flask, Django, PowerBI, Plotly, MetaBase, Servidores Linux, Streamlit"
+    "Programação: Python, SQL, Bash",
+    "Nuvem e Infraestrutura: AWS (Boto3, Lambda, Glue, S3, EC2, AWS CLI, CloudFormation, Terraform, VPC, RDS, IAM, SSM, QuickSight, Lake Formation, Amazon Athena, EventBridge, SNS, RedShift, DynamoDB, Kinesis, Amazon Q, Bedrock, CloudWatch, KMS, CodeBuild, EKS, ECR, API Gateway, Cognito, Route53, ACM)",
+    "DevSecOps: Docker, Git, CI/CD, Chaos Engineering, Kubernetes, Segurança, Least Privilege Access, Criptografia",
+    "Engenharia de Dados: PySpark, Airflow, Kafka, Qualidade de Dados",
+    "IA e Machine Learning: Scikit-learn, MLlib (Spark), spaCy, LLMOps, Agentes de IA",
+    "Bancos de Dados: PostgreSQL, MySQL, Redis, MongoDB, Hadoop, SQLite",
+    "Análise de Dados: Pandas, AED, Estatística, Scipy, NumPy",
+    "Monitoramento e Testes: Prometheus, Grafana, Pytest",
+    "Web e Visualização: Flask, Django, PowerBI, Plotly, MetaBase, Streamlit",
+    "Sistemas: Servidores Linux"
   ],
   "languages": [
     {

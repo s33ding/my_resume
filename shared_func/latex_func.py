@@ -128,7 +128,8 @@ def generate_resume_tex(resume_data, path):
         doc.append(NoEscape(r"\begin{multicols}{2}"))
         doc.append(NoEscape(r"\resumeItemListStart"))
         for skill in resume_data['skills']:
-            doc.append(NoEscape(f"\\item {skill}"))
+            escaped_skill = skill.replace('&', '\\&')
+            doc.append(NoEscape(f"\\item {escaped_skill}"))
         doc.append(NoEscape(r"\resumeItemListEnd"))
         doc.append(NoEscape(r"\end{multicols}"))
         # Add a line for certificate link
@@ -267,7 +268,8 @@ def generate_resume_tex_pt(resume_data, path):
         doc.append(NoEscape(r"\begin{multicols}{2}"))
         doc.append(NoEscape(r"\resumeItemListStart"))
         for skill in resume_data['skills']:
-            doc.append(NoEscape(f"\\item {skill}"))
+            escaped_skill = skill.replace('&', '\\&')
+            doc.append(NoEscape(f"\\item {escaped_skill}"))
         doc.append(NoEscape(r"\resumeItemListEnd"))
         doc.append(NoEscape(r"\end{multicols}"))
         doc.append(NoEscape(r"\vspace{0.5em}"))  # Add some vertical space
