@@ -98,13 +98,15 @@ resume_data = {
     ]
     ,
     "skills": [
-        "Programming: Python, SQL, Bash",
-        "Cloud: AWS (Boto3, Lambda, Glue, S3, EC2, AWS CLI, Terraform, VPC, RDS, Secret Manager, IAM, SSM, QuickSight, AWS Lake Formation, Amazon Athena, EventBridge, SNS, Rekognition, RedShift, DynamoDB)",
+        "Programming: Python, SQL, Bash, Cryptography",
+        "Cloud: AWS (Boto3, Lambda, Glue, S3, EC2, AWS CLI, Terraform, VPC, RDS, Secret Manager, IAM, SSM, QuickSight, AWS Lake Formation, Amazon Athena, EventBridge, SNS, Rekognition, RedShift, DynamoDB, Kinesis, SAM, Amazon Q, Bedrock, CloudWatch, KMS, CodeBuild, EKS, ECR)",
         "Databases: PostgreSQL, MySQL, Redis, MongoDB, Hadoop",
         "Data Analysis: Pandas, EDA, Probability, Statistics, Sympy, Scipy, Itertools, NumPy",
-        "Data Processing: Docker, Git, PySpark, Shell scripting, Regex, Vim, Airflow, Crontab",
+        "Data Processing: Docker, Git, PySpark, Shell scripting, Regex, Vim, Airflow, Crontab, Kafka",
         "Machine Learning: Scikit-learn, MLlib (Spark), spaCy",
-        "Others: Flask, Django, PowerBI, Plotly, MetaBase, Linux Servers"
+        "Monitoring: Prometheus, Grafana",
+        "Testing: Unit Testing, Data Quality, CI/CD",
+        "Others: Flask, Django, PowerBI, Plotly, MetaBase, Linux Servers, Streamlit"
     ],
     "languages": [
             {"language": "English", "certification": "TOEFL (Oct 2020)", "link":"https://github.com/s33ding/my_resume/blob/main/my_certificates/english_TOEFL_my_score.pdf"},
@@ -187,13 +189,15 @@ resume_data_pt = {
     ],
 
   "skills": [
-    "Programação: Python, SQL, Bash",
-    "Nuvem: AWS (Boto3, Lambda, Glue, S3, EC2, AWS CLI, Terraform, VPC, RDS, Secret Manager, IAM, SSM, QuickSight, AWS Lake Formation, Amazon Athena, EventBridge, SNS, Rekognition, RedShift, DynamoDB)",
+    "Programação: Python, SQL, Bash, Criptografia",
+    "Nuvem: AWS (Boto3, Lambda, Glue, S3, EC2, AWS CLI, Terraform, VPC, RDS, Secret Manager, IAM, SSM, QuickSight, AWS Lake Formation, Amazon Athena, EventBridge, SNS, Rekognition, RedShift, DynamoDB, Kinesis, SAM, Amazon Q, Bedrock, CloudWatch, KMS, CodeBuild, EKS, ECR)",
     "Bancos de Dados: PostgreSQL, MySQL, Redis, MongoDB, Hadoop",
     "Análise de Dados: Pandas, AED, Probabilidade, Estatística, Sympy, Scipy, Itertools, NumPy",
-    "Processamento de Dados: Docker, Git, PySpark, Shell scripting, Regex, Vim, Airflow, Crontab",
+    "Processamento de Dados: Docker, Git, PySpark, Shell scripting, Regex, Vim, Airflow, Crontab, Kafka",
     "Machine Learning: Scikit-learn, MLlib (Spark), spaCy",
-    "Outros: Flask, Django, PowerBI, Plotly, MetaBase, Servidores Linux"
+    "Monitoramento: Prometheus, Grafana",
+    "Testes: Testes Unitários, Qualidade de Dados, CI/CD",
+    "Outros: Flask, Django, PowerBI, Plotly, MetaBase, Servidores Linux, Streamlit"
   ],
   "languages": [
     {
