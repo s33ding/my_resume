@@ -104,7 +104,7 @@ resume_data = {
         "Data Engineering: PySpark, Airflow, Kafka, Data Quality",
         "AI & Machine Learning: Scikit-learn, MLlib (Spark), spaCy, LLMOps, AI Agents",
         "Databases: PostgreSQL, MySQL, Redis, MongoDB, Hadoop, SQLite",
-        "Data Analysis: Pandas, EDA, Statistics, Scipy, NumPy",
+        "Data Analysis: Pandas, EDA, Inference, Scipy, NumPy",
         "Monitoring & Testing: Prometheus, Grafana, Pytest",
         "Web & Visualization: Flask, Django, PowerBI, Plotly, MetaBase, Streamlit",
         "Systems: Linux Servers"
@@ -196,7 +196,7 @@ resume_data_pt = {
     "Engenharia de Dados: PySpark, Airflow, Kafka, Qualidade de Dados",
     "IA e Machine Learning: Scikit-learn, MLlib (Spark), spaCy, LLMOps, Agentes de IA",
     "Bancos de Dados: PostgreSQL, MySQL, Redis, MongoDB, Hadoop, SQLite",
-    "Análise de Dados: Pandas, AED, Estatística, Scipy, NumPy",
+    "Análise de Dados: Pandas, AED, Inference, Scipy, NumPy",
     "Monitoramento e Testes: Prometheus, Grafana, Pytest",
     "Web e Visualização: Flask, Django, PowerBI, Plotly, MetaBase, Streamlit",
     "Sistemas: Servidores Linux"
