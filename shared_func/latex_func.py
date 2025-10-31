@@ -36,17 +36,7 @@ def generate_resume_tex(resume_data, path):
     doc.preamble.append(NoEscape(r"\addtolength{\textwidth}{0.0in}"))
 
     # Adjust the top margin and vertical offset
-    doc.preamble.append(NoEscape(r"\addtolength{\topmargin}{0.2in}"))  # Further decrease top margin
-    doc.preamble.append(NoEscape(r"\addtolength{\textheight}{1.0in}"))  # Increase text height to fit more content
-    doc.preamble.append(NoEscape(r"\urlstyle{same}"))
-    doc.preamble.append(NoEscape(r"\raggedright"))
-    doc.preamble.append(NoEscape(r"\setlength{\tabcolsep}{0in}"))
-    doc.preamble.append(NoEscape(r"\titleformat{\section}{\it\vspace{3pt}}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]"))
-    doc.preamble.append(NoEscape(r"\pdfgentounicode=1"))
-
-
-    # Adjust the top margin and vertical offset
-    doc.preamble.append(NoEscape(r"\addtolength{\topmargin}{-1.0in}"))  # Further decrease top margin
+    doc.preamble.append(NoEscape(r"\addtolength{\topmargin}{-0.7in}"))  # Further decrease top margin
     doc.preamble.append(NoEscape(r"\addtolength{\textheight}{1.0in}"))  # Increase text height to fit more content
     doc.preamble.append(NoEscape(r"\urlstyle{same}"))
     doc.preamble.append(NoEscape(r"\raggedright"))
@@ -69,21 +59,20 @@ def generate_resume_tex(resume_data, path):
     doc.preamble.append(NoEscape(r"\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-1pt}}"))  # Reduce spacing after item list
 
     # Title Section
-    with doc.create(Section("", numbering=False)) as title:
-        title.append(NoEscape(r"\begin{center}"))
-        title.append(NoEscape(f"{{\\LARGE {resume_data['name']}}} \\\\ \\vspace{{5pt}}"))
-        title.append(NoEscape(f"{{\\large {resume_data['title']}}} \\\\ \\vspace{{5pt}}"))
-        title.append(NoEscape(r"\end{center}"))
-        title.append(NoEscape(r"\begin{center}"))
-        contact = resume_data["contact"]
-        title.append(NoEscape(
-            f"City: {contact['city']} \\quad \\textbullet \\quad "
-            f"\\href{{https://wa.me/qr/UYOUX2DZ7BYHI1}}{{Phone: +55 (61) 98234-0088}} \\quad \\textbullet \\quad "
-            f"\\href{{https://www.linkedin.com/in/s33ding/}}{{LinkedIn: @s33ding}} \\quad \\textbullet \\quad "
-            f"\\href{{mailto:{contact['email']}}}{{Email: {contact['email']}}} \\quad \\textbullet \\quad "
-            f"\\href{{{contact['github']}}}{{Github: @s33ding}}"
-        ))
-        title.append(NoEscape(r"\end{center}"))
+    doc.append(NoEscape(r"\begin{center}"))
+    doc.append(NoEscape(f"{{\\large \\textbf{{{resume_data['name']}}}}} \\\\ \\vspace{{3pt}}"))
+    doc.append(NoEscape(f"{{\\normalsize \\textbf{{{resume_data['title']}}}}} \\\\ \\vspace{{3pt}}"))
+    doc.append(NoEscape(r"\end{center}"))
+    doc.append(NoEscape(r"\begin{center}"))
+    contact = resume_data["contact"]
+    doc.append(NoEscape(
+        f"City: {contact['city']} \\quad \\textbullet \\quad "
+        f"\\href{{https://wa.me/qr/UYOUX2DZ7BYHI1}}{{Phone: +55 (61) 98234-0088}} \\quad \\textbullet \\quad "
+        f"\\href{{https://www.linkedin.com/in/s33ding/}}{{LinkedIn: @s33ding}} \\quad \\textbullet \\quad "
+        f"\\href{{mailto:{contact['email']}}}{{Email: {contact['email']}}} \\quad \\textbullet \\quad "
+        f"\\href{{{contact['github']}}}{{Github: @s33ding}}"
+    ))
+    doc.append(NoEscape(r"\end{center}"))
 
     # About Me Section
     with doc.create(Section('About Me', numbering=False)):
@@ -204,25 +193,24 @@ def generate_resume_tex_pt(resume_data, path):
     doc.preamble.append(NoEscape(r"\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-1pt}}"))  # Reduce spacing after item list
 
     # Title Section
-    with doc.create(Section("", numbering=False)) as title:
-        title.append(NoEscape(r"\begin{center}"))
-        title.append(NoEscape(f"{{\\LARGE {resume_data['name']}}} \\\\ \\vspace{{5pt}}"))
-        title.append(NoEscape(f"{{\\large {resume_data['title']}}} \\\\ \\vspace{{5pt}}"))
-        title.append(NoEscape(r"\end{center}"))
-        title.append(NoEscape(r"\begin{center}"))
+    doc.append(NoEscape(r"\begin{center}"))
+    doc.append(NoEscape(f"{{\\large \\textbf{{{resume_data['name']}}}}} \\\\ \\vspace{{3pt}}"))
+    doc.append(NoEscape(f"{{\\normalsize \\textbf{{{resume_data['title']}}}}} \\\\ \\vspace{{3pt}}"))
+    doc.append(NoEscape(r"\end{center}"))
+    doc.append(NoEscape(r"\begin{center}"))
 
-        contact = resume_data["contact"]
+    contact = resume_data["contact"]
 
-        title.append(NoEscape(r"\small"))  # Make only this section very small
-        title.append(NoEscape(
-            f"Cidade: {contact['city']} \\quad \\textbullet \\quad "
-            f"\\href{{https://wa.me/qr/UYOUX2DZ7BYHI1}}{{Celular: +55 (61) 98234-0088}} \\quad \\textbullet \\quad "
-            f"\\href{{https://www.linkedin.com/in/s33ding/}}{{LinkedIn: @s33ding}} \\quad \\textbullet \\quad "
-            f"\\href{{mailto:{contact['email']}}}{{Email: {contact['email']}}} \\quad \\textbullet \\quad "
-            f"\\href{{{contact['github']}}}{{Github: @s33ding}}"
-        ))
-        title.append(NoEscape(r"\normalsize"))  # Return to normal size for the rest of the document
-        title.append(NoEscape(r"\end{center}"))
+    doc.append(NoEscape(r"\small"))  # Make only this section very small
+    doc.append(NoEscape(
+        f"Cidade: {contact['city']} \\quad \\textbullet \\quad "
+        f"\\href{{https://wa.me/qr/UYOUX2DZ7BYHI1}}{{Celular: +55 (61) 98234-0088}} \\quad \\textbullet \\quad "
+        f"\\href{{https://www.linkedin.com/in/s33ding/}}{{LinkedIn: @s33ding}} \\quad \\textbullet \\quad "
+        f"\\href{{mailto:{contact['email']}}}{{Email: {contact['email']}}} \\quad \\textbullet \\quad "
+        f"\\href{{{contact['github']}}}{{Github: @s33ding}}"
+    ))
+    doc.append(NoEscape(r"\normalsize"))  # Return to normal size for the rest of the document
+    doc.append(NoEscape(r"\end{center}"))
 
 
     # About Me Section

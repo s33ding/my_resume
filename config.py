@@ -1,5 +1,6 @@
 import os
 
+upload = 1
 bucket_name = "s33ding"
 bucket_name = "robertomdiniz"
 
@@ -98,9 +99,9 @@ resume_data = {
     ]
     ,
     "skills": [
-        "Programming: Python, SQL, Bash",
-        "Cloud & Infrastructure: AWS (Boto3, Lambda, Glue, S3, EC2, AWS CLI, CloudFormation, Terraform, VPC, RDS, IAM, SSM, QuickSight, Lake Formation, Amazon Athena, EventBridge, SNS, RedShift, DynamoDB, Kinesis, Amazon Q, Bedrock, CloudWatch, KMS, CodeBuild, EKS, ECR, API Gateway, Cognito, Route53, ACM)",
-        "DevSecOps: Docker, Git, CI/CD, Chaos Engineering, Kubernetes, Security, Least Privilege Access, Cryptography",
+        "Programming: Python, SQL, Bash, Java",
+        "Cloud & Infrastructure: AWS (Boto3, Lambda, Glue, S3, EC2, AWS CLI, CloudFormation, VPC, RDS, IAM, SSM, QuickSight, Lake Formation, Amazon Athena, EventBridge, SNS, RedShift, DynamoDB, Kinesis, Amazon Q, Bedrock, CloudWatch, KMS, CodeBuild, EKS, ECR, API Gateway, Cognito, Route53, ACM)",
+        "DevSecOps: Docker, Git, CI/CD, Chaos Engineering, Kubernetes, Security, Least Privilege Access, Cryptography, Terraform, Snyk",
         "Data Engineering: PySpark, Airflow, Kafka, Data Quality",
         "AI & Machine Learning: Scikit-learn, MLlib (Spark), spaCy, LLMOps, AI Agents",
         "Databases: PostgreSQL, MySQL, Redis, MongoDB, Hadoop, SQLite",
@@ -110,8 +111,8 @@ resume_data = {
         "Systems: Linux Servers"
     ],
     "languages": [
-            {"language": "English", "certification": "TOEFL (Oct 2020)", "link":"https://github.com/s33ding/my_resume/blob/main/my_certificates/english_TOEFL_my_score.pdf"},
-            {"language": "English", "certification": "Casa Thomas Jefferson (Sep 2017)","link":"https://github.com/s33ding/my_resume/blob/main/my_certificates/english_Casa%20Thomas%20Jefferson.pdf"}
+            {"language": "English", "certification": "TOEFL (Oct 2020)", "link":"http://robertomdiniz.s3-website-us-east-1.amazonaws.com/accomplishments/english_TOEFL_my_score.pdf"},
+            {"language": "English", "certification": "Casa Thomas Jefferson (Sep 2017)","link":"http://robertomdiniz.s3-website-us-east-1.amazonaws.com/accomplishments/english_Casa%20Thomas%20Jefferson.pdf"}
     ],
     "resume_download_link": f"https://{bucket_name}.s3.amazonaws.com/{file_name_resume}",
     "qr_code": f"https://{bucket_name}.s3.amazonaws.com/qr_code.png",
@@ -136,8 +137,7 @@ resume_data_pt = {
     "gerenciamento de data lakes e integração de soluções em nuvem. "
     "Especialista em PySpark, AWS, Docker e Linux, com foco na qualidade de dados, automação e eficiência. "
     "Possuo as certificações AWS Developer Associate e KCNA. "
-    "Atualmente, estou me preparando para os exames CKA e AWS DevOps Engineer Professional, "
-    "com o objetivo de expandir meu conhecimento em Kubernetes e práticas de DevOps."
+    "Atualmente me preparando para os exames CKA e AWS DevOps Engineer Professional."
     ),
   "experience": [
     {
@@ -190,9 +190,9 @@ resume_data_pt = {
     ],
 
   "skills": [
-    "Programação: Python, SQL, Bash",
-    "Nuvem e Infraestrutura: AWS (Boto3, Lambda, Glue, S3, EC2, AWS CLI, CloudFormation, Terraform, VPC, RDS, IAM, SSM, QuickSight, Lake Formation, Amazon Athena, EventBridge, SNS, RedShift, DynamoDB, Kinesis, Amazon Q, Bedrock, CloudWatch, KMS, CodeBuild, EKS, ECR, API Gateway, Cognito, Route53, ACM)",
-    "DevSecOps: Docker, Git, CI/CD, Chaos Engineering, Kubernetes, Segurança, Least Privilege Access, Criptografia",
+    "Programação: Python, SQL, Bash, Java",
+    "Nuvem e Infraestrutura: AWS (Boto3, Lambda, Glue, S3, EC2, AWS CLI, CloudFormation, VPC, RDS, IAM, SSM, QuickSight, Lake Formation, Amazon Athena, EventBridge, SNS, RedShift, DynamoDB, Kinesis, Amazon Q, Bedrock, CloudWatch, KMS, CodeBuild, EKS, ECR, API Gateway, Cognito, Route53, ACM)",
+    "DevSecOps: Docker, Git, CI/CD, Chaos Engineering, Kubernetes, Segurança, Least Privilege Access, Criptografia, Terraform, Snyk",
     "Engenharia de Dados: PySpark, Airflow, Kafka, Qualidade de Dados",
     "IA e Machine Learning: Scikit-learn, MLlib (Spark), spaCy, LLMOps, Agentes de IA",
     "Bancos de Dados: PostgreSQL, MySQL, Redis, MongoDB, Hadoop, SQLite",
@@ -205,12 +205,12 @@ resume_data_pt = {
     {
       "language": "Inglês",
       "certification": "TOEFL (Out 2020)",
-      "link": "https://github.com/s33ding/my_resume/blob/main/my_certificates/english_TOEFL_my_score.pdf"
+      "link": "http://robertomdiniz.s3-website-us-east-1.amazonaws.com/accomplishments/english_TOEFL_my_score.pdf"
     },
     {
       "language": "Inglês",
       "certification": "Casa Thomas Jefferson (Set 2017)",
-      "link": "https://github.com/s33ding/my_resume/blob/main/my_certificates/english_Casa%20Thomas%20Jefferson.pdf"
+      "link": "http://robertomdiniz.s3-website-us-east-1.amazonaws.com/accomplishments/english_Casa%20Thomas%20Jefferson.pdf"
     }
   ],
   "resume_download_link": f"https://{bucket_name}.s3.amazonaws.com/{file_name_resume_pt}",
