@@ -23,6 +23,17 @@ htmlcov/
 *.swp
 *.swo
 
+# LaTeX
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.synctex.gz
+*.out
+*.toc
+*.bbl
+*.blg
+
 # OS
 .DS_Store
 Thumbs.db
